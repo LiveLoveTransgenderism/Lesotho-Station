@@ -1,5 +1,5 @@
 // <Trauma>
-using Content.Trauma.Common.Nanochat;
+using Content.Trauma.Common.NanoChat;
 // </Trauma>
 using Content.Shared.Access.Systems;
 using Content.Shared.StatusIcon;
