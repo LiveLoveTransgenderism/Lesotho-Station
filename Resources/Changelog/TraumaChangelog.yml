@@ -8877,3 +8877,12 @@ Entries:
   id: 1011
   time: '2026-05-21T23:32:00.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/2718
+- author: TechnicFighter
+  changes:
+  - type: Add
+    message: Added the Breaching Hammer
+  - type: Tweak
+    message: Added the Breaching Hammer to the Melee Weapon Safe
+  id: 1012
+  time: '2026-05-22T04:25:01.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/2719
