@@ -9138,3 +9138,14 @@ Entries:
   id: 1042
   time: '2026-05-27T19:28:46.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/2840
+- author: MayasMischief
+  changes:
+  - type: Tweak
+    message: Buffed the Phaser (10>12 damage)
+  - type: Tweak
+    message: Buffed the Laser Gun (10>14 damage)
+  - type: Tweak
+    message: Buffed the Laser Carbine's accuracy (its damage is fine)
+  id: 1043
+  time: '2026-05-27T19:54:59.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/2706
