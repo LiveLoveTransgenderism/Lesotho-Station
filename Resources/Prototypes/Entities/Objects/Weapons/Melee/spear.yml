@@ -106,9 +106,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        # <Trauma> - removed 30 damage trigger
-        damage: 10 # was 20
-        # </Trauma>
+        damage: 10 # Trauma - was 20
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -255,12 +253,6 @@
     graph: SpearBone
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 40 # Goob edit, excess damage avoids cost of spawning entities.
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
         damage: 20
