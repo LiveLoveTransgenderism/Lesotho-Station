@@ -9625,3 +9625,10 @@ Entries:
   id: 1092
   time: '2026-06-03T05:59:26.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/2989
+- author: SpeltIncorrectyl
+  changes:
+  - type: Add
+    message: Added a harm mode to interactors. Automated forging is now!
+  id: 1093
+  time: '2026-06-03T07:11:15.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3006
