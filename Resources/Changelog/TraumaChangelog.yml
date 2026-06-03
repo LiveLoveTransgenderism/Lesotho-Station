@@ -9664,3 +9664,24 @@ Entries:
   id: 1095
   time: '2026-06-03T15:00:16.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3019
+- author: TechnicFighter
+  changes:
+  - type: Add
+    message: Added the Deathrattle Implant to non-nukie uplinks, for 10 TC.
+  - type: Add
+    message: Added the M-90 to the uplink, for 50 TC.
+  - type: Tweak
+    message: Reworked ALOT of prices of items in the uplink. Too many to write here.
+  - type: Tweak
+    message: Renault now yields 40 TC, instead of 25.
+  - type: Tweak
+    message: Reworked some weapons, buffs, nerfs, changes, etc.
+  - type: Fix
+    message: >-
+      Killed metagaming rigged boxing gloves, now you can get them as other
+      colours too.
+  - type: Remove
+    message: Removed His Grace from surplus.
+  id: 1096
+  time: '2026-06-03T18:08:07.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/2847
