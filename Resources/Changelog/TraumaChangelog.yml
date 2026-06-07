@@ -9880,3 +9880,10 @@ Entries:
   id: 1121
   time: '2026-06-07T12:19:52.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3068
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed mortar and pestle not working.
+  id: 1122
+  time: '2026-06-07T23:11:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3096
