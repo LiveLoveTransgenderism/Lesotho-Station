@@ -10002,3 +10002,12 @@ Entries:
   id: 1132
   time: '2026-06-09T13:43:16.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3124
+- author: Wizard25671
+  changes:
+  - type: Remove
+    message: Removed the additional traitor spawns on the vampire gamemode
+  - type: Tweak
+    message: Increased the max amount of vampires that appear from the vampire gamemode
+  id: 1133
+  time: '2026-06-09T22:50:10.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3121
