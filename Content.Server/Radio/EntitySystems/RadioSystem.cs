@@ -6,7 +6,9 @@ using Content.Shared.Chat.RadioIconsEvents;
 using Content.Shared.Whitelist;
 // </Trauma>
 using Content.Server.Administration.Logs;
+using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
+using Content.Server.Ghost;
 using Content.Server.Power.Components;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -39,6 +41,8 @@ public sealed partial class RadioSystem : EntitySystem
     [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private GhostSystem _ghost = default!;
     [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
 
     // set used to prevent radio feedback loops.
@@ -49,7 +53,6 @@ public sealed partial class RadioSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveEvent>(OnIntrinsicReceive);
         SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
-        SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveAttemptEvent>(OnIntrinsicReceiveAttempt); // Goobstation
     }
 
     private void OnIntrinsicSpeak(EntityUid uid, IntrinsicRadioTransmitterComponent component, EntitySpokeEvent args)
@@ -65,23 +68,27 @@ public sealed partial class RadioSystem : EntitySystem
 
     private void OnIntrinsicReceive(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveEvent args)
     {
-        if (TryComp(uid, out ActorComponent? actor))
+        if (!TryComp(uid, out ActorComponent? actor))
+            return;
+
+        // <Trauma> - replaced event's MsgChatMessage with the inner messages, add language obfuscation
+        var msg = args.OriginalChatMsg;
+        if (_ghost.CanGhostWarp(actor.PlayerSession, out _))
         {
-            // Einstein Engines - Languages begin
-            var msg = args.OriginalChatMsg;
-
-            if (!_language.CanUnderstand(uid, args.Language.ID))
-                msg = args.LanguageObfuscatedChatMsg;
-
-            _netMan.ServerSendMessage(new MsgChatMessage { Message = msg }, actor.PlayerSession.Channel);
-            // Einstein Engines - Languages end
+            msg = new ChatMessage(msg)
+            {
+                WrappedMessage = _chatManager.PrependFollowButtonIfAppropriate(
+                    msg.WrappedMessage,
+                    args.MessageSource,
+                    actor.PlayerSession.Channel),
+            };
         }
-    }
 
-    // Goobstation - Whitelisted radio channels
-    private void OnIntrinsicReceiveAttempt(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveAttemptEvent args)
-    {
-        args.Cancelled = _whitelist.IsWhitelistFail(args.Channel.ReceiveWhitelist, uid);
+        if (!_language.CanUnderstand(uid, args.Language.ID))
+            msg = args.LanguageObfuscatedChatMsg;
+
+        _netMan.ServerSendMessage(new MsgChatMessage { Message = msg }, actor.PlayerSession.Channel);
+        // <Trauma>
     }
 
     /// <summary>
