@@ -199,6 +199,7 @@
         Heat: 0.90
         Radiation: 0.25
   - type: ToggleableClothing
+    verbText: toggle-clothing-verb-helmet
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:Container {}
@@ -297,6 +298,7 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHatHoodWinterDefault
+    verbText: toggle-clothing-verb-hood
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:Container {}
