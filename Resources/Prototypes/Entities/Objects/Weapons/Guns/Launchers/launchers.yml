@@ -269,6 +269,13 @@
   id: WeaponForceGun
   description: Manipulates gravity around objects to fling them at high velocities.
   components:
+    # <Trauma>
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 125
+        Glass: 100
+        Silver: 50
+    # </Trauma>
     - type: Item
       size: Normal
     - type: ForceGun
@@ -293,27 +300,22 @@
           map: [ "unshaded" ]
           shader: unshaded
           visible: false
-        - type: ToggleableVisuals
-          spriteLayer: unshaded
-          inhandVisuals:
-            left:
-              - state: inhand-left-unshaded
-                shader: unshaded
-            right:
-              - state: inhand-right-unshaded
-                shader: unshaded
-        - type: Appearance
-        - type: GenericVisualizer
-          visuals:
-            enum.TetherVisualsStatus.Key:
-              unshaded:
-                True: { visible: true }
-                False: { visible: false }
-    - type: PhysicalComposition #Goobstation - Recycle update
-      materialComposition:
-        Steel: 125
-        Glass: 100
-        Silver: 50
+    - type: ToggleableVisuals
+      spriteLayer: unshaded
+      inhandVisuals:
+        left:
+          - state: inhand-left-unshaded
+            shader: unshaded
+        right:
+          - state: inhand-right-unshaded
+            shader: unshaded
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.TetherVisualsStatus.Key:
+          unshaded:
+            True: { visible: true }
+            False: { visible: false }
 
 - type: entity
   name: grappling gun
