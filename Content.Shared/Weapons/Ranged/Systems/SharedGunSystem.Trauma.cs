@@ -25,7 +25,7 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Get a predicted random instance for an entity, specific to this tick.
     /// </summary>
-    public System.Random Random(EntityUid uid)
+    public IRobustRandom Random(EntityUid uid)
         => SharedRandomExtensions.PredictedRandom(Timing, GetNetEntity(uid));
 
     /// <summary>

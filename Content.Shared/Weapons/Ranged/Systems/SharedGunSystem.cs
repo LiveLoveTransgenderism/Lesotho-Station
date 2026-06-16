@@ -754,7 +754,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     /// </summary>
     public void EjectCartridge( // Trauma - made public
         // <Trauma>
-        System.Random rand, // predicted random instance for the gun
+        IRobustRandom rand, // predicted random instance for the gun
         EntityUid? user,
         // </Trauma>
         EntityUid entity,
