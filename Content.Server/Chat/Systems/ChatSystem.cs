@@ -68,6 +68,8 @@ public sealed partial class ChatSystem : SharedChatSystem
     private bool _critLoocEnabled;
     private readonly bool _adminLoocEnabled = true;
 
+    private bool _deadChatEnabled = true;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -75,6 +77,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         Subs.CVar(_configurationManager, CCVars.LoocEnabled, OnLoocEnabledChanged, true);
         Subs.CVar(_configurationManager, CCVars.DeadLoocEnabled, OnDeadLoocEnabledChanged, true);
         Subs.CVar(_configurationManager, CCVars.CritLoocEnabled, OnCritLoocEnabledChanged, true);
+        Subs.CVar(_configurationManager, CCVars.DeadChatEnabled, OnDeadChatEnabledChanged, true);
 
         SubscribeLocalEvent<GameRunLevelChangedEvent>(OnGameChange);
     }
@@ -105,6 +108,16 @@ public sealed partial class ChatSystem : SharedChatSystem
         _critLoocEnabled = val;
         _chatManager.DispatchServerAnnouncement(
             Loc.GetString(val ? "chat-manager-crit-looc-chat-enabled-message" : "chat-manager-crit-looc-chat-disabled-message"));
+    }
+
+    private void OnDeadChatEnabledChanged(bool val)
+    {
+        if (_deadChatEnabled == val)
+            return;
+
+        _deadChatEnabled = val;
+        _chatManager.DispatchServerAnnouncement(
+            Loc.GetString(val ? "chat-manager-dead-chat-enabled-message" : "chat-manager-dead-chat-disabled-message"));
     }
 
     private void OnGameChange(GameRunLevelChangedEvent ev)
