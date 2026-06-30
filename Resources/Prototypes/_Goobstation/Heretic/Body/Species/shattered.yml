@@ -36,6 +36,7 @@
   - MobCombat
   - MobAtmosStandard
   - MobFlammable
+  - MobNightVision
   id: MobShattered
   components:
   - type: FootprintOwner
@@ -80,10 +81,6 @@
         Holy: -2
   - type: Targeting
   - type: PressureImmunity
-  - type: NightVision
-    color: "#177698"
-    activateSound: null
-    deactivateSound: null
   - type: ZombieImmune
   - type: MobThresholds
     thresholds:

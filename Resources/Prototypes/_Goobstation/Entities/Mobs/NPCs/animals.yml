@@ -124,15 +124,11 @@
   - type: Perishable
 
 - type: entity
-  name: syndiroach
+  parent: [ MobMothroach, MobNightVision ]
   id: MobMothSyndie
-  parent: MobMothroach
+  name: syndiroach
   description: Explosive moth.
   components:
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: Sprite
     sprite: _Goobstation/Mobs/Animals/syndiroach.rsi
   - type: Clothing
@@ -296,7 +292,7 @@
 
 # TDOO: why does it not inherit from regular carp
 - type: entity
-  parent: [ AppearanceCarp, SimpleSpaceMobBase, FlyingMobBase, BaseSlicingRefinable ]
+  parent: [ AppearanceCarp, SimpleSpaceMobBase, FlyingMobBase, MobNightVision, BaseSlicingRefinable ]
   id: MobCarpSentient
   name: space carp
   description: It's a space carp. Used to be a person.
@@ -377,10 +373,6 @@
     interactFailureString: petting-failure-carp
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: LanguageSpeaker
     speaks:
     - TauCetiBasic # Is sentient, should have TauCeti since it's the norm.

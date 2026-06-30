@@ -1,11 +1,15 @@
 - type: entity
   name: space carp
   id: BaseMobCarp
-  parent: [ AppearanceCarp, SimpleSpaceMobBase, FlyingMobBase, MobCombat, BaseSlicingRefinable ] # Trauma - added AppearanceCarp
+  parent: [ AppearanceCarp, SimpleSpaceMobBase, FlyingMobBase, MobCombat, BaseSlicingRefinable, MobNightVision ] # Trauma - added AppearanceCarp
   description: It's a space carp.
   abstract: true
   components:
-    - type: WeatherImmune # Lavaland Change
+    # </Trauma>
+    - type: WeatherImmune
+    - type: VentCrawler
+    - type: Fauna
+    # <Trauma>
     - type: InputMover
     - type: MobMover
     - type: HTN
@@ -93,12 +97,6 @@
       interactFailureString: petting-failure-carp
       interactFailureSound:
         path: /Audio/Effects/bite.ogg
-    - type: NightVision # Goobstation - Nigthvision
-      color: "#808080"
-      activateSound: null
-      deactivateSound: null
-    - type: VentCrawler # Goobstation
-    - type: Fauna # Lavaland Change
 
 - type: entity
   parent: BaseMobCarp

@@ -240,9 +240,6 @@
     - MindRoleGhoul
   - type: NightVision
     color: white
-    activateSound: null
-    deactivateSound: null
-    drawOverlay: false
   - type: Eye
     drawFov: false
   - type: Viewcone
@@ -291,8 +288,6 @@
   - type: FlashImmunity
   - type: NightVision
     color: aquamarine
-    activateSound: null
-    deactivateSound: null
   - type: MeleeWeapon
     animation: WeaponArcPunch
     soundHit:

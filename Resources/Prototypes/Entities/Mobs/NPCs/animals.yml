@@ -1,6 +1,6 @@
 - type: entity
   name: bat
-  parent: [ SimpleMobBase, FlyingMobBase, MobCombat, BaseSlicingRefinable ]
+  parent: [ SimpleMobBase, FlyingMobBase, MobCombat, BaseSlicingRefinable, MobNightVision ]
   id: MobBat
   description: Some cultures find them terrifying, others crunchy on the teeth.
   components:
@@ -60,10 +60,6 @@
     understands:
     - Mouse
     - TauCetiBasic
-  - type: NightVision # Goobstation - Nightvision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Effects/bite.ogg
@@ -366,7 +362,7 @@
 
 - type: entity
   name: cockroach
-  parent: [SolutionFood, SolutionTiny, SimpleMobBase, BaseSlicingRefinable]
+  parent: [SolutionFood, SolutionTiny, SimpleMobBase, BaseSlicingRefinable, MobNightVision]
   id: MobCockroach
   description: This station is just crawling with bugs.
   components:
@@ -2009,7 +2005,7 @@
 
 - type: entity
   name: mouse
-  parent: [BaseMobMouse, SimpleMobBase, SolutionVermin, BaseSlicingRefinable] # Trauma - unique mouse body
+  parent: [BaseMobMouse, SimpleMobBase, SolutionVermin, BaseSlicingRefinable, MobNightVision] # Trauma - unique mouse body
   id: MobMouse
   description: Squeak!
   components:
@@ -2018,10 +2014,6 @@
     enterDelay: 0.5
   - type: AnimatedEmotes
     tweakState: mouse-tweaking-0
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: EggLayer
     eggSpawn:
     - id: SpawnMobMouse
@@ -2849,7 +2841,7 @@
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
 - type: entity
-  parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat, BaseSlicingRefinable ]
+  parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat, BaseSlicingRefinable, MobNightVision ]
   id: MobSpiderBase
   abstract: true
   components:
@@ -2940,10 +2932,6 @@
         Heat: -0.03
         Cold: -0.03
         Shock: -0.03
-  - type: NightVision # Goobstation - Nigthvision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
 
 - type: entity
   parent: [SolutionWeapon, SolutionTiny]
@@ -3595,15 +3583,9 @@
 - type: entity
   name: syndicat
   id: MobCatSyndy
-  parent: MobCatSpace
+  parent: [ MobCatSpace, MobNightVision ] # Trauma - added MobNightVision
   description: Explosive kitten.
   components:
-  # <Trauma>
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
-  # </Trauma>
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -3874,7 +3856,7 @@
 
 - type: entity
   name: hamster
-  parent: [ SimpleMobBase, MobCombat, StripableInventoryBase, BaseSlicingRefinable]
+  parent: [ SimpleMobBase, MobCombat, StripableInventoryBase, BaseSlicingRefinable, MobNightVision]
   id: MobHamster
   description: A cute, fluffy, robust hamster.
   components:

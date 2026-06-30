@@ -3,15 +3,11 @@
 
 - type: entity
   name: space adder
-  parent: [AppearanceSpaceAdder, SimpleSpaceMobBase, BaseSlicingRefinable] # Trauma - added AppearanceSpaceAdder
+  parent: [AppearanceSpaceAdder, SimpleSpaceMobBase, BaseSlicingRefinable, MobNightVision] # Trauma - added AppearanceSpaceAdder, MobNightVision
   id: MobPurpleSnake
   description: A menacing purple snake from Kepler-283c.
   components:
   # <Trauma>
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: VentCrawler
   # </Trauma>
   - type: Sprite

@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ AppearanceDragon, SimpleSpaceMobBase, FlyingMobBase, BaseSlicingRefinable ] # Trauma - added AppearanceDragon
+  parent: [ AppearanceDragon, SimpleSpaceMobBase, FlyingMobBase, BaseSlicingRefinable, MobNightVision ] # Trauma - added AppearanceDragon
   id: BaseMobDragon
   suffix: ""
   name: space dragon
@@ -15,10 +15,6 @@
     damageModifierSet: Dragon
   - type: Injurable
     damageContainer: Biological
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: Fauna
   - type: LanguageSpeaker # carp language (keeping basic as an option because the space monster gloating is funny)
     speaks:

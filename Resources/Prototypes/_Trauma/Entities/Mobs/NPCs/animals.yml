@@ -338,7 +338,7 @@
         Base: grass_snake_dead
 
 - type: entity
-  parent: [ AppearanceSpaceCobra, SimpleMobBase, BaseSlicingRefinable ]
+  parent: [ AppearanceSpaceCobra, SimpleMobBase, MobNightVision, BaseSlicingRefinable ]
   id: MobCobra
   name: cobra
   description: A patterned hood and a venomous bite. Best admired from a distance.
@@ -350,10 +350,6 @@
     understands:
     - Xeno
     - TauCetiBasic
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: VentCrawler
   - type: Sprite
     drawdepth: Mobs
@@ -541,7 +537,7 @@
     interactFailureString: petting-failure-generic
 
 - type: entity
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ SimpleMobBase, MobCombat, MobNightVision ]
   id: MobMantisShrimp
   name: mantis shrimp
   description: A deceptively small crustacean with a punch that can shatter bone. Do not let it near the glass.
@@ -624,13 +620,9 @@
     interactFailureString: petting-failure-generic
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
 
 - type: entity
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ SimpleMobBase, MobCombat, MobNightVision ]
   id: MobShrimp
   name: shrimp
   description: A dangerous crustacean, try to dodge its bubbles.
@@ -715,10 +707,6 @@
     interactFailureString: petting-failure-generic
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
 
 - type: entity
   abstract: true

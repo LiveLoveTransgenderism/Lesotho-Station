@@ -102,7 +102,7 @@
 
 - type: entity
   abstract: true
-  parent: [ AppearanceCarp, SimpleSpaceMobBase, FlyingMobBase, MobCombat, BaseSlicingRefinable ]
+  parent: [ AppearanceCarp, SimpleSpaceMobBase, FlyingMobBase, MobCombat, MobNightVision, BaseSlicingRefinable ]
   id: BaseMobArcher
   name: archer fish
   description: It's an archer fish.
@@ -194,10 +194,6 @@
     interactFailureString: petting-failure-generic
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: VentCrawler
   - type: Fauna
 

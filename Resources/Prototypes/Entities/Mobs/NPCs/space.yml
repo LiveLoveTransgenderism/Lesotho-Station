@@ -1,7 +1,7 @@
 - type: entity
   name: basic
   id: MobSpaceBasic
-  parent: SimpleSpaceMobBase
+  parent: [ SimpleSpaceMobBase, MobNightVision ]
   abstract: true
   description: It looks friendly. Why don't you give it a hug?
   components:
@@ -334,10 +334,6 @@
     - type: NpcFactionMember
       factions:
       - Xeno # Aligning them with Space Adders
-    - type: NightVision
-      color: "#808080"
-      activateSound: null
-      deactivateSound: null
     - type: VentCrawler
     # </Trauma>
     - type: Sprite
@@ -543,7 +539,7 @@
       Unsexed: SheepSpace
 
 - type: entity
-  parent: [SimpleSpaceMobBase, BaseMobAnimal, SolutionVermin]
+  parent: [SimpleSpaceMobBase, BaseMobAnimal, SolutionVermin, MobNightVision]
   id: MobSnail
   name: snail
   description: Revolting unless you're french.

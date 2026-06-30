@@ -15,6 +15,7 @@
   - type: NightVision
     flashDurationMultiplier: 2
     isEquipment: true
+    overlayColor: "#98FB9833"
   - type: IdentityBlocker
     coverage: EYES
 

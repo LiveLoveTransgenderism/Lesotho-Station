@@ -2,7 +2,7 @@
 
 - type: entity
   abstract: true
-  parent: [ SimpleSpaceMobBase, BaseSlicingRefinable ]
+  parent: [ SimpleSpaceMobBase, BaseSlicingRefinable, MobNightVision ]
   id: CMBaseXeno
   name: ancient base xeno
   description: An alien drone.
@@ -28,7 +28,7 @@
     speedModifier: 2
     useSound:
       path: /Audio/Items/crowbar.ogg
-  - type: UseDelay # Goobstation - For insta prying
+  - type: UseDelay
     delay: 1
   - type: Reactive
     groups:
@@ -134,20 +134,16 @@
         Caustic: -0.13
   - type: StaticPrice
     price: 3000
-  - type: Insulated # Goobstation
+  - type: Insulated
     coefficient: 0.5
-  - type: NightVision # Goobstation - Nigthvision
-    color: "#d14343"
-    activateSound: null
-    deactivateSound: null
   - type: TileMovement
   - type: VentCrawler
-  - type: LanguageSpeaker # Einstein Engines - Language
+  - type: LanguageSpeaker
     speaks:
     - Xeno
     understands:
     - Xeno
-  - type: Fauna # Lavaland Change
+  - type: Fauna
 
 - type: entity
   name: ancient drone
