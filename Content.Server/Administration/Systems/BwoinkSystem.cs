@@ -105,7 +105,7 @@ namespace Content.Server.Administration.Systems
             Subs.CVar(_config, CVars.GameHostName, OnServerNameChanged, true);
             Subs.CVar(_config, CCVars.AdminAhelpOverrideClientName, OnOverrideChanged, true);
             Subs.CVar(_config, CCVars.AhelpQuickInfoStartWordSize, v => _startWordMinSize = v, true);
-            _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("AHELP");
+            _sawmill = LogManager.GetSawmill("AHELP");
 
             var defaultParams = new AHelpMessageParams(
                 string.Empty,
@@ -769,7 +769,7 @@ namespace Content.Server.Administration.Systems
 
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
-                
+
             _afkManager.PlayerDidAction(senderSession);
 
             var bwoinkParams = new BwoinkParams(message,
