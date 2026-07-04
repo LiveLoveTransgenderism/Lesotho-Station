@@ -11022,3 +11022,10 @@ Entries:
   id: 1231
   time: '2026-07-04T08:53:01.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3416
+- author: Weax
+  changes:
+  - type: Tweak
+    message: Clown Goblins no longer inject Honk
+  id: 1232
+  time: '2026-07-04T08:53:47.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3385
