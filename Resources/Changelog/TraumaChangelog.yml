@@ -11045,3 +11045,12 @@ Entries:
   id: 1234
   time: '2026-07-04T09:05:56.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3418
+- author: Graaves... Brains...
+  changes:
+  - type: Tweak
+    message: >-
+      Adjusted zombie healing and damage resistance, they no longer get 1 tapped
+      by everything but don't have extreme regen.
+  id: 1235
+  time: '2026-07-04T09:15:50.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3425
