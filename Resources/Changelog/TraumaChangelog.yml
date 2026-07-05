@@ -11061,3 +11061,12 @@ Entries:
   id: 1236
   time: '2026-07-04T20:27:57.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3434
+- author: deltanedas
+  changes:
+  - type: Add
+    message: >-
+      Lights now have a logic control port for setting it on/off with a single
+      signal's value.
+  id: 1237
+  time: '2026-07-05T03:59:33.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3435
