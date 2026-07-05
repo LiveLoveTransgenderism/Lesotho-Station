@@ -58,6 +58,7 @@ using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Nutrition.Components;
+using Content.Shared.Overlays;
 using Content.Shared.Polymorph;
 using Content.Shared.Preferences;
 using Content.Shared.Projectiles;

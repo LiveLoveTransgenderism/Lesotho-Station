@@ -323,7 +323,7 @@
   # <Trauma>
   - type: NightVision
     overlayColor: "#98FB9833"
-    isEquipment: true
+    relayOverlay: true
   - type: Armor
     coverage:
     - Head
