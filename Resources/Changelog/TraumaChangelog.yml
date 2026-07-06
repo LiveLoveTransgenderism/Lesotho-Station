@@ -11202,3 +11202,10 @@ Entries:
   id: 1241
   time: '2026-07-05T22:21:27.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3319
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Metal barricades no longer use walls knowledge as required theory skills.
+  id: 1242
+  time: '2026-07-06T00:11:21.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3448
