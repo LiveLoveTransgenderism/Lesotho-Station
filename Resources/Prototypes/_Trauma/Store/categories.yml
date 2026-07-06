@@ -16,3 +16,10 @@
   id: SpellbookBundles
   name: store-caregory-spellbook-bundles
   priority: 7
+
+# Traitor
+
+- type: storeCategory
+  id: UplinkSkills
+  name: store-category-skills
+  priority: 12
