@@ -229,13 +229,13 @@ public sealed partial class PolymorphSystem : SharedPolymorphSystem // Trauma - 
         var proto = configuration.Entity;
         if (proto == null)
         {
-            if (!_proto.TryIndex(configuration.Entities, out var entities) || entities.Weights.Count == 0)
+            if (!ProtoMan.Resolve(configuration.Entities, out var entities) || entities.Weights.Count == 0)
             {
-                if (!_proto.TryIndex(configuration.Groups, out var groups) || groups.Weights.Count == 0)
+                if (!ProtoMan.Resolve(configuration.Groups, out var groups) || groups.Weights.Count == 0)
                     return null;
 
                 var weightedEntityRandom = groups.Pick(_random);
-                if (!_proto.TryIndex(weightedEntityRandom, out entities) || entities.Weights.Count == 0)
+                if (!ProtoMan.Resolve(weightedEntityRandom, out entities) || entities.Weights.Count == 0)
                     return null;
             }
 

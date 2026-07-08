@@ -89,7 +89,7 @@ public sealed partial class ResearchSystem
             return;
 
         // R&D Console Rework Start
-        var allTechs = PrototypeManager.EnumeratePrototypes<TechnologyPrototype>().ToList();
+        var allTechs = ProtoMan.EnumeratePrototypes<TechnologyPrototype>().ToList();
         Dictionary<string, ResearchAvailability> techList;
         var points = 0;
 
