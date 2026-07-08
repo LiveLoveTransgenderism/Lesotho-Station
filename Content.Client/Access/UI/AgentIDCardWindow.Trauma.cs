@@ -48,10 +48,9 @@ public sealed partial class AgentIDCardWindow
 
     private void UpdateNumber()
     {
-        if (!_ent.TryGetComponent<NanoChatCardComponent>(_owner, out var comp))
+        if (!_ent.TryGetComponent<NanoChatCardComponent>(_owner, out var comp) || comp.Number is not { } number)
             return;
 
-        var number = comp.Number;
         if (_number == number)
             return;
 

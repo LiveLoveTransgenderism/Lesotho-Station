@@ -37,20 +37,20 @@ public sealed partial class LogProbeCartridgeSystem
         var query = EntityQueryEnumerator<LogProbeCartridgeComponent, CartridgeComponent>();
         while (query.MoveNext(out var uid, out var probe, out var cartridge))
         {
-            if (probe.ScannedNanoChatData == null || GetEntity(probe.ScannedNanoChatData.Value.Card) != args.CardUid)
+            if (probe.ScannedNanoChatData is not { } data || GetEntity(data.Card) != args.CardUid)
                 continue;
 
             if (!TryComp<NanoChatCardComponent>(args.CardUid, out var card))
                 continue;
 
             probe.ScannedNanoChatData = new NanoChatData(
-                probe.ScannedNanoChatData.Value.Recipients,
+                data.Recipients,
                 new Dictionary<uint, List<NanoChatMessage>>(card.Messages),
                 card.Number,
-                GetNetEntity(args.CardUid));
+                data.Card);
 
-            if (cartridge.LoaderUid != null)
-                UpdateUiState((uid, probe), cartridge.LoaderUid.Value);
+            if (cartridge.LoaderUid is { } pda)
+                UpdateUiState((uid, probe), pda);
         }
     }
 

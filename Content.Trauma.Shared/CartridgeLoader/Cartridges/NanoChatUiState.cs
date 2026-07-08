@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Trauma.Common.CartridgeLoader.Cartridges;
 
-namespace Content.Trauma.Common.CartridgeLoader.Cartridges;
+namespace Content.Trauma.Shared.CartridgeLoader.Cartridges;
 
 [Serializable, NetSerializable]
 public sealed class NanoChatUiState : BoundUserInterfaceState
