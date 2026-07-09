@@ -2,10 +2,11 @@
 
 namespace Content.Medical.Common.Surgery.Tools;
 
-public interface ISurgeryToolComponent
+// TODO: replace with tool qualities...
+public abstract partial class BaseSurgeryToolComponent : Component
 {
-    [DataField]
-    public string ToolName { get; }
+    [ViewVariables]
+    public abstract string ToolName { get; }
 
     /// <summary>
     ///     Field intended for discardable or non-reusable tools.

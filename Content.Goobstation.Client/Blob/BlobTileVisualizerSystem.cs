@@ -6,11 +6,6 @@ using Content.Goobstation.Shared.Blob.Components;
 
 namespace Content.Goobstation.Client.Blob;
 
-public sealed partial class BlobTileSystem : SharedBlobTileSystem
-{
-    protected override void TryUpgrade(Entity<BlobTileComponent> target, Entity<BlobCoreComponent> core, EntityUid observer) { }
-}
-
 public sealed partial class BlobTileVisualizerSystem : VisualizerSystem<BlobTileComponent>
 {
     public override void Initialize()

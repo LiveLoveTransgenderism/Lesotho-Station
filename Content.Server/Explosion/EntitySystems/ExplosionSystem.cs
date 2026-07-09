@@ -1,6 +1,3 @@
-// <Trauma>
-using Content.Shared.Armor;
-// </Trauma>
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration.Logs;
@@ -9,6 +6,7 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Destructible; // Trauma - Destructible moved to shared
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NPC.Pathfinding;
+using Content.Shared.Armor;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Camera;
 using Content.Shared.CCVar;
@@ -121,15 +119,6 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
         _nodeGroupSystem.PauseUpdating = false;
         _pathfindingSystem.PauseUpdating = false;
         ProtoMan.PrototypesReloaded -= ReloadExplosionPrototypes;
-    }
-
-    public void SetExplosionResistance(EntityUid entityUid, float newCoefficient, ExplosionResistanceComponent? component = null) // Goobstation - Blob
-    {
-        if (!Resolve(entityUid, ref component))
-            return;
-
-        component.DamageCoefficient = newCoefficient;
-        Dirty(entityUid, component);
     }
 
     private void RelayedResistance(EntityUid uid, ExplosionResistanceComponent component,

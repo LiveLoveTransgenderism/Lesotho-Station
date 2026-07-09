@@ -12,21 +12,16 @@ namespace Content.Goobstation.Client.Blob;
 
 public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
 {
-    [Dependency] private ILightManager _lightManager = default!;
+    [Dependency] private ILightManager _light = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<BlobObserverComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
-        SubscribeLocalEvent<BlobObserverComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
-
         SubscribeLocalEvent<BlobObserverComponent, GetStatusIconsEvent>(OnShowBlobIcon);
         SubscribeLocalEvent<ZombieBlobComponent, GetStatusIconsEvent>(OnShowBlobIcon);
         SubscribeLocalEvent<BlobCarrierComponent, GetStatusIconsEvent>(OnShowBlobIcon);
         SubscribeLocalEvent<BlobbernautComponent, GetStatusIconsEvent>(OnShowBlobIcon);
-
-        SubscribeNetworkEvent<RoundRestartCleanupEvent>(RoundRestartCleanup);
     }
 
     private static readonly ProtoId<FactionIconPrototype> BlobFaction = "BlobFaction";
@@ -36,18 +31,21 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         args.StatusIcons.Add(ProtoMan.Index<FactionIconPrototype>(BlobFaction));
     }
 
-    private void OnPlayerAttached(EntityUid uid, BlobObserverComponent component, LocalPlayerAttachedEvent args)
+    [SubscribeLocalEvent]
+    private void OnPlayerAttached(Entity<BlobObserverComponent> ent, ref LocalPlayerAttachedEvent args)
     {
-        _lightManager.DrawLighting = false;
+        _light.DrawLighting = false;
     }
 
-    private void OnPlayerDetached(EntityUid uid, BlobObserverComponent component, LocalPlayerDetachedEvent args)
+    [SubscribeLocalEvent]
+    private void OnPlayerDetached(Entity<BlobObserverComponent> ent, ref LocalPlayerDetachedEvent args)
     {
-        _lightManager.DrawLighting = true;
+        _light.DrawLighting = true;
     }
 
+    [SubscribeNetworkEvent]
     private void RoundRestartCleanup(RoundRestartCleanupEvent ev)
     {
-        _lightManager.DrawLighting = true;
+        _light.DrawLighting = true;
     }
 }

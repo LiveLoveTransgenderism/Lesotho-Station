@@ -94,7 +94,6 @@
     speed: 0.45
   - type: Tending
     speed: 0.65
-  - type: Screwdriver
   - type: SurgeryTool
     startSound:
       collection: Screwdriver
@@ -372,8 +371,6 @@
     speed: 0.75
   - type: Drill
     speed: 1
-  - type: Screwdriver
-    speed: 0.3 # it's actually worse because you need fine control
   - type: SurgeryTool
     startSound: /Audio/Items/drill_use.ogg
   - type: DamageOtherOnHit

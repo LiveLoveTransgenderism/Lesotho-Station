@@ -2,11 +2,11 @@
 
 using Content.Shared.FixedPoint;
 
-namespace Content.Goobstation.Server.Blob.Components;
+namespace Content.Goobstation.Shared.Blob.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class BlobResourceComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("pointsPerPulsed")]
+    [DataField]
     public FixedPoint2 PointsPerPulsed = 3;
 }

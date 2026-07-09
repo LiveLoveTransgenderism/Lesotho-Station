@@ -370,7 +370,7 @@ public sealed partial class PolymorphSystem : SharedPolymorphSystem // Trauma - 
 
                 var type = registration.Type;
 
-                if (!EntityManager.TryGetComponent(uid, type, out var component))
+                if (!TryComp(uid, type, out var component))
                     continue;
 
                 var newComp = Factory.GetComponent(type);
@@ -625,7 +625,7 @@ public sealed partial class PolymorphSystem : SharedPolymorphSystem // Trauma - 
         if (old == @new)
             return null;
 
-        if (!EntityManager.TryGetComponent(old, compType, out var comp))
+        if (!TryComp(old, compType, out var comp))
             return null;
 
         if (transfer)

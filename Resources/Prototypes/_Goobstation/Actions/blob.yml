@@ -168,5 +168,5 @@
     range: 200
   - type: WorldTargetAction
     event: !type:BlobTransformTileActionEvent
-      transformFrom: Invalid
+      transformFrom: null
       tileType: Normal

@@ -8,7 +8,7 @@ namespace Content.Goobstation.Shared.Blob.Components;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class BlobMobComponent : Component
 {
-    [ViewVariables(VVAccess.ReadOnly), DataField("healthOfPulse")]
+    [DataField]
     public DamageSpecifier HealthOfPulse = new()
     {
         DamageDict = new()
@@ -16,6 +16,7 @@ public sealed partial class BlobMobComponent : Component
             { "Blunt", -4 },
             { "Slash", -4 },
             { "Piercing", -4 },
+            { "Ballistic", -4 },
             { "Heat", -4 },
             { "Cold", -4 },
             { "Shock", -4 },

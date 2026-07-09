@@ -168,7 +168,7 @@ public abstract partial class SharedSurgerySystem
 
             args.Invalid = StepInvalidReason.MissingTool;
 
-            if (reg.Component is ISurgeryToolComponent required)
+            if (reg.Component is BaseSurgeryToolComponent required)
                 args.Popup = $"You need {required.ToolName} to perform this step!";
             else
                 Log.Error($"Surgery step {ToPrettyString(ent)} wants bad component {reg.Component} which isn't a ISurgeryTool");
@@ -810,7 +810,7 @@ public abstract partial class SharedSurgerySystem
         bool doPopup,
         out string? popup,
         out StepInvalidReason reason,
-        out ISurgeryToolComponent? data)
+        out BaseSurgeryToolComponent? data)
     {
         data = null;
 
@@ -868,9 +868,9 @@ public abstract partial class SharedSurgerySystem
         return !ev.Cancelled;
     }
 
-    private ISurgeryToolComponent? GetSurgeryComp(EntityUid tool, IComponent component)
+    private BaseSurgeryToolComponent? GetSurgeryComp(EntityUid tool, IComponent component)
     {
-        if (EntityManager.TryGetComponent(tool, component.GetType(), out var found) && found is ISurgeryToolComponent data)
+        if (TryComp(tool, component.GetType(), out var found) && found is BaseSurgeryToolComponent data)
             return data;
 
         return null;

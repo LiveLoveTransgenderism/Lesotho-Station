@@ -11,14 +11,17 @@ public sealed partial class BlobTileComponent : Component
     [DataField, AutoNetworkedField]
     public Color Color = Color.White;
 
-    [ViewVariables]
-    public Entity<BlobCoreComponent>? Core;
-
-    [DataField]
-    public bool ReturnCost = true;
+    [DataField, AutoNetworkedField]
+    public EntityUid? Core;
 
     [DataField(required: true)]
-    public BlobTileType BlobTileType = BlobTileType.Invalid;
+    public ProtoId<BlobTilePrototype> Tile;
+
+    /// <summary>
+    /// Tile that can spread when pulsed by a node blob.
+    /// </summary>
+    [DataField]
+    public ProtoId<BlobTilePrototype> SpreadTile = "Normal";
 
     [DataField]
     public DamageSpecifier HealthOfPulse = new()
@@ -28,6 +31,7 @@ public sealed partial class BlobTileComponent : Component
             { "Blunt", -4 },
             { "Slash", -4 },
             { "Piercing", -4 },
+            { "Ballistic", -4 },
             { "Heat", -4 },
             { "Cold", -4 },
             { "Shock", -4 },
@@ -42,21 +46,4 @@ public sealed partial class BlobTileComponent : Component
             { "Heat", 24 },
         }
     };
-}
-
-[Serializable]
-public enum BlobTileType : byte
-{
-    Invalid, // invalid default value 0
-    Normal,
-    Strong,
-    Reflective,
-    Resource,
-    /*
-    Storage,
-    Turret,
-    */
-    Node,
-    Factory,
-    Core,
 }
