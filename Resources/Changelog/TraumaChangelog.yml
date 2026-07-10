@@ -11359,3 +11359,10 @@ Entries:
   id: 1254
   time: '2026-07-10T13:31:31.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3504
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Skillchips now list their skills when examined.
+  id: 1255
+  time: '2026-07-10T14:20:16.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3506
