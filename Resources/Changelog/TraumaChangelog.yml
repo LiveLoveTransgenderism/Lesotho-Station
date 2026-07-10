@@ -11373,3 +11373,10 @@ Entries:
   id: 1256
   time: '2026-07-10T14:42:55.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3508
+- author: NoElkaTheGod
+  changes:
+  - type: Tweak
+    message: Plasma is now called phoron
+  id: 1257
+  time: '2026-07-10T14:44:30.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3505
