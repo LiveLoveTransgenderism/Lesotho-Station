@@ -5,32 +5,30 @@ using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Coordinates;
-using Content.Shared.Doors.Components;
+using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
-using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.UserInterface;
 using Content.Shared.Verbs;
 using Content.Trauma.Shared.Heretic.Components.PathSpecific.Lock;
 using Content.Trauma.Shared.Heretic.Rituals;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Physics.Components;
 
 namespace Content.Trauma.Shared.Heretic.Systems.PathSpecific.Lock;
 
 public abstract partial class SharedEldritchIdCardSystem : EntitySystem
 {
     [Dependency] private INetManager _net = default!;
-    [Dependency] private IComponentFactory _compFact = default!;
 
     [Dependency] private SharedUserInterfaceSystem _ui = default!;
     [Dependency] private SharedIdCardSystem _idCard = default!;
     [Dependency] private SharedAccessSystem _access = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
-    [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private SharedHereticSystem _heretic = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private LockPortalSystem _portal = default!;
 
     public override void Initialize()
     {
@@ -42,43 +40,24 @@ public abstract partial class SharedEldritchIdCardSystem : EntitySystem
         SubscribeLocalEvent<EldritchIdCardComponent, EldritchIdMessage>(OnMessage);
         SubscribeLocalEvent<EldritchIdCardComponent, GetVerbsEvent<AlternativeVerb>>(OnAltVerb);
         SubscribeLocalEvent<EldritchIdCardComponent, BeforeRangedInteractEvent>(OnBeforeInteract);
+        SubscribeLocalEvent<EldritchIdCardComponent, LockPortalDoAfterEvent>(OnDoAfter);
     }
 
-    private void OnBeforeInteract(Entity<EldritchIdCardComponent> ent, ref BeforeRangedInteractEvent args)
+    private void OnDoAfter(Entity<EldritchIdCardComponent> ent, ref LockPortalDoAfterEvent args)
     {
-        if (!args.CanReach || args.Target == null || !_heretic.IsHereticOrGhoul(args.User))
+        if (args.Cancelled || args.Handled)
             return;
 
-        var target = args.Target.Value;
+        args.Handled = true;
 
-        if (TryComp(target, out IdCardComponent? idCard))
-        {
-            args.Handled = true;
-            EatCard(ent, (target, idCard), args.User);
-            return;
-        }
-
-        if (TryComp(target, out LockPortalComponent? portal))
-        {
-            args.Handled = true;
-            InvertPortals((target, portal), args.User);
-            return;
-        }
-
-        if (!TryComp(target, out DoorComponent? door) || !door.BumpOpen && !door.ClickOpen ||
-            !TryComp(target, out PhysicsComponent? body) ||
-            (body.CollisionLayer & LockPortalSystem.LockPortalMask) == 0)
+        if (args.Target is not { } target)
             return;
 
-        var coords = Transform(target).Coordinates;
-
-        if (_lookup.GetEntitiesInRange<LockPortalComponent>(coords, 0.4f).Count > 0)
+        if (_portal.IsDoorOccupied(target, args.User))
         {
             _popup.PopupClient(Loc.GetString("heretic-ability-fail-tile-occupied"), args.User, args.User);
             return;
         }
-
-        args.Handled = true;
 
         if (_net.IsClient)
             return;
@@ -151,6 +130,49 @@ public abstract partial class SharedEldritchIdCardSystem : EntitySystem
             newPortalComp.LinkedPortal = ent.Comp.PortalOne.Value;
             portalOneComp.LinkedPortal = newPortal;
         }
+    }
+
+    private void OnBeforeInteract(Entity<EldritchIdCardComponent> ent, ref BeforeRangedInteractEvent args)
+    {
+        if (!args.CanReach || args.Target == null || !_heretic.IsHereticOrGhoul(args.User))
+            return;
+
+        var target = args.Target.Value;
+
+        if (TryComp(target, out IdCardComponent? idCard))
+        {
+            args.Handled = true;
+            EatCard(ent, (target, idCard), args.User);
+            return;
+        }
+
+        if (TryComp(target, out LockPortalComponent? portal))
+        {
+            args.Handled = true;
+            InvertPortals((target, portal), args.User);
+            return;
+        }
+
+        if (!_portal.IsDoorValid(target))
+            return;
+
+        var doArgs = new DoAfterArgs(EntityManager,
+            args.User,
+            ent.Comp.PortalCreationTime,
+            new LockPortalDoAfterEvent(),
+            ent,
+            target,
+            ent)
+        {
+            BreakOnMove = true,
+            BreakOnDamage = true,
+            NeedHand = true,
+            BreakOnWeightlessMove = false,
+            MultiplyDelay = false,
+        };
+
+        if (_doAfter.TryStartDoAfter(doArgs))
+            args.Handled = true;
     }
 
     private void OnAltVerb(Entity<EldritchIdCardComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
@@ -311,7 +333,7 @@ public abstract partial class SharedEldritchIdCardSystem : EntitySystem
         Entity<EldritchIdCardComponent, IdCardComponent> idCard = (ent.Owner, ent.Comp, id);
         Dirty(idCard);
 
-        var ui = _compFact.GetComponent<ActivatableUIComponent>();
+        var ui = Factory.GetComponent<ActivatableUIComponent>();
         ui.InHandsOnly = true;
         ui.SingleUser = true;
         ui.Key = EldritchIdUiKey.Key;
@@ -324,3 +346,6 @@ public abstract partial class SharedEldritchIdCardSystem : EntitySystem
         return true;
     }
 }
+
+[Serializable, NetSerializable]
+public sealed partial class LockPortalDoAfterEvent : SimpleDoAfterEvent;
