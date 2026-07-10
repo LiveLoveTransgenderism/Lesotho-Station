@@ -77,4 +77,4 @@ ent-PlasmaCanister = phoron canister
 ent-WarningPlasma = phoron waste sign
     .desc = WARNING! Phoron flow tube. Ensure the flow is disengaged before working.
 ent-SheetPlasma = phoron
-    .desc = Gasous phoron stabilized into solid ingots. Fuel of progress for the last 2 centuries, the primary source of Nanotrasen's power, and the stolen treasure of the Oob'Mola.
+    .desc = Gaseous phoron stabilized into solid ingots. Fuel of progress for the last 2 centuries, the primary source of Nanotrasen's power, and the stolen treasure of the Oob'Mola.
