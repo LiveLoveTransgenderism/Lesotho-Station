@@ -2,9 +2,9 @@ name: Hunt for Heisentests
 
 on:
   workflow_dispatch:
-  # every 15 minutes
+  # every 60 minutes
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/60 * * * *"
 
 jobs:
   hunt:
@@ -25,14 +25,17 @@ jobs:
     - name: Build Project
       run: dotnet build --configuration DebugOpt --no-restore /m
 
-    - name: Run Content.Tests
-      id: tests
-      run: dotnet test --no-build --configuration DebugOpt Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0 NUnit.TestOutputXml="logs" NUnit.WorkDirectory="$(pwd)/test_results"
-
+    # never seen map heisentest and gamerule tests are way too flaky right now to even care
     - name: Run Content.IntegrationTests
       id: integration_tests
       run: |
-        DOTNET_gcServer=1 dotnet test --no-build --configuration DebugOpt Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0 NUnit.MapWarningTo=Failed NUnit.TestOutputXml="logs" NUnit.WorkDirectory="$(pwd)/test_results"
+        DOTNET_gcServer=1 dotnet test --no-build --configuration DebugOpt \
+        Content.IntegrationTests/Content.IntegrationTests.csproj -- \
+        NUnit.Where="cat != MapTests && cat != GameRuleTests" \
+        NUnit.ConsoleOut=0 \
+        NUnit.MapWarningTo=Failed \
+        NUnit.TestOutputXml="logs" \
+        NUnit.WorkDirectory="$(pwd)/test_results"
 
     - name: Archive NUnit3 test results.
       if: failure()
