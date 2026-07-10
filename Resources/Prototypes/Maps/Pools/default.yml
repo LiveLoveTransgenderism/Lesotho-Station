@@ -10,7 +10,7 @@
   - MachineMaterialSilo # for main departments
   - MachineMasterMaterialSilo # for cargo to easily distribute mats to department silos
   maps:
-  - Atlas
+  #- Atlas # SpawnPointExtraAiCore
   #- Amber # needs SpawnPointExtraAiCore mapped
   - Bagel
   - Box
