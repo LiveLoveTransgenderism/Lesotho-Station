@@ -25,6 +25,8 @@
         min: 1
         max: 2
       playerRatio: 25
+  - type: DynamicRuleCost
+    cost: 50
 
 - type: entity
   parent: BaseTraitorRule
@@ -108,6 +110,8 @@
     antags:
     - !type:FixedAntagCount
       proto: Blob
+  - type: DynamicRuleCost
+    cost: 80
 
 - type: entity
   parent: [ BaseNukeopsRule, BaseRoundstartAntagRule ]
@@ -153,3 +157,5 @@
     antags:
     - !type:FixedAntagCount
       proto: Devil
+  - type: DynamicRuleCost
+    cost: 40

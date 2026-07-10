@@ -51,9 +51,6 @@
         acts: [ "Destruction" ]
   - type: BlobTile
     tile: Core
-  - type: Store
-    currencyWhitelist:
-    - BlobPoint
   - type: BlobCore
     actionPrototypes:
     - ActionSwapBlobChem

@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Shared.Blob.Components;
-using Content.Shared.FixedPoint;
 
 namespace Content.Goobstation.Shared.Blob;
 
@@ -15,7 +14,7 @@ public sealed partial class BlobTilePrototype : IPrototype
     public string Name = string.Empty;
 
     [DataField(required: true)]
-    public FixedPoint2 Cost;
+    public int Cost;
 
     [DataField(required: true)]
     public EntProtoId<BlobTileComponent> Entity;

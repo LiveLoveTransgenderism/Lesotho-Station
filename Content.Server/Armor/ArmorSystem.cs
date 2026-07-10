@@ -19,7 +19,7 @@ public sealed partial class ArmorSystem : SharedArmorSystem
         foreach (var modifier in component.Modifiers.Coefficients)
         {
             var damageType = ProtoMan.Index<DamageTypePrototype>(modifier.Key);
-            args.Price += component.PriceMultiplier * damageType.ArmorPriceCoefficient * 100 * (1 - modifier.Value); // Trauma - 100 -> 45
+            args.Price += component.PriceMultiplier * damageType.ArmorPriceCoefficient * 45 * (1 - modifier.Value);
         }
 
         foreach (var modifier in component.Modifiers.FlatReduction)

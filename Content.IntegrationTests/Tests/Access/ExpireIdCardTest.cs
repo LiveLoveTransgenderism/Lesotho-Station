@@ -1,3 +1,6 @@
+// <Trauma>
+using Robust.Shared.Timing;
+// </Trauma>
 #nullable enable
 using Content.IntegrationTests.Fixtures;
 using Content.IntegrationTests.Fixtures.Attributes;
@@ -33,6 +36,7 @@ namespace Content.IntegrationTests.Tests.Access
     - GenpopLeave
 ";
 
+        [SidedDependency(Side.Server)] private readonly IGameTiming _timing = default!; // Trauma
         [SidedDependency(Side.Server)] private readonly SharedIdCardSystem _sharedIdCardSystem = null!;
 
         [Test]
@@ -42,7 +46,7 @@ namespace Content.IntegrationTests.Tests.Access
             ExpireIdCardComponent expireComp = default!;
             AccessComponent accessComp = default!;
             var expirationTimeInSeconds = 2.0f;
-            var expireTime = TimeSpan.FromSeconds(expirationTimeInSeconds);
+            var expireTime = _timing.CurTime + TimeSpan.FromSeconds(expirationTimeInSeconds); // Trauma - add CurTime bruh
 
             await Pair.Server.WaitPost(() =>
             {

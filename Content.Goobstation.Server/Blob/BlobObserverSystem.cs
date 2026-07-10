@@ -5,6 +5,7 @@ using Content.Goobstation.Shared.Blob;
 using Content.Goobstation.Shared.Blob.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
+using Content.Shared.Actions;
 using Content.Shared.Mind;
 using Content.Shared.Roles;
 using Robust.Shared.CPUJob.JobQueues.Queues;
@@ -29,16 +30,20 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
     private const double MoverJobTime = 0.005;
     private readonly JobQueue _moveJobQueue = new(MoverJobTime);
 
-    private void SendBlobBriefing(EntityUid mind)
+    public override void Initialize()
     {
-        if (_player.TryGetSessionByEntity(mind, out var session))
-        {
-            _chat.DispatchServerMessage(session, Loc.GetString("blob-role-greeting"));
-        }
+        base.Initialize();
+
+        SubscribeLocalEvent<BlobCoreComponent, PlayerAttachedEvent>(OnCorePlayerAttached, before: [typeof(SharedActionsSystem)]);
     }
 
-    [SubscribeLocalEvent]
-    private void OnPlayerAttached(Entity<BlobCoreComponent> ent, PlayerAttachedEvent args)
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+        _moveJobQueue.Process();
+    }
+
+    private void OnCorePlayerAttached(Entity<BlobCoreComponent> ent, ref PlayerAttachedEvent args)
     {
         var xform = Transform(ent);
         if (!_gridQuery.HasComp(xform.GridUid))
@@ -50,6 +55,24 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         CreateBlobObserver(ent, args.Player.UserId);
     }
 
+    // TODO: This is very bad, but it is clearly better than invisible walls, let someone do better.
+    [SubscribeLocalEvent]
+    private void OnMoveEvent(Entity<BlobObserverComponent> ent, ref MoveEvent args)
+    {
+        if (ent.Comp.IsProcessingMoveEvent)
+            return;
+
+        ent.Comp.IsProcessingMoveEvent = true;
+
+        var job = new BlobObserverMover(EntityManager, Xform, this, MoverJobTime)
+        {
+            Observer = ent,
+            NewPosition = args.NewPosition
+        };
+
+        _moveJobQueue.EnqueueJob(job);
+    }
+
     public void CreateBlobObserver(Entity<BlobCoreComponent> core, NetUserId userId)
     {
         var coords = Transform(core).Coordinates;
@@ -57,7 +80,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         var observerComp = Comp<BlobObserverComponent>(observer);
 
         core.Comp.Observer = observer;
-        Dirty(core);
+        DirtyField(core, core.Comp, nameof(BlobCoreComponent.Observer));
 
         observerComp.Core = core;
         Dirty(observer, observerComp);
@@ -105,27 +128,11 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         _mind.TryAddObjective(mindId, mind, BlobCaptureObjective);
     }
 
-    // TODO: This is very bad, but it is clearly better than invisible walls, let someone do better.
-    [SubscribeLocalEvent]
-    private void OnMoveEvent(Entity<BlobObserverComponent> ent, ref MoveEvent args)
+    private void SendBlobBriefing(EntityUid mind)
     {
-        if (ent.Comp.IsProcessingMoveEvent)
-            return;
-
-        ent.Comp.IsProcessingMoveEvent = true;
-
-        var job = new BlobObserverMover(EntityManager, Xform, this, MoverJobTime)
+        if (_player.TryGetSessionByEntity(mind, out var session))
         {
-            Observer = ent,
-            NewPosition = args.NewPosition
-        };
-
-        _moveJobQueue.EnqueueJob(job);
-    }
-
-    public override void Update(float frameTime)
-    {
-        base.Update(frameTime);
-        _moveJobQueue.Process();
+            _chat.DispatchServerMessage(session, Loc.GetString("blob-role-greeting"));
+        }
     }
 }

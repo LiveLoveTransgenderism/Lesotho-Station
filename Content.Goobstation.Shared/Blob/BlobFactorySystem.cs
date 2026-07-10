@@ -5,7 +5,6 @@ using Content.Goobstation.Shared.Blob.Components;
 using Content.Shared.Damage;
 using Content.Shared.Destructible;
 using Content.Shared.Trigger.Components.Effects;
-using Content.Shared.FixedPoint;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Weapons.Melee;
 
@@ -75,7 +74,10 @@ public sealed partial class BlobFactorySystem : EntitySystem
             return;
 
         // forget dead pods
+        var oldPodCount = ent.Comp.BlobPods.Count;
         ent.Comp.BlobPods.RemoveAll(b => TerminatingOrDeleted(b) || !_mob.IsAlive(b));
+        if (oldPodCount != ent.Comp.BlobPods.Count)
+            Dirty(ent);
 
         if (ent.Comp.BlobPods.Count >= ent.Comp.SpawnLimit)
             return;
@@ -90,6 +92,7 @@ public sealed partial class BlobFactorySystem : EntitySystem
 
         var pod = PredictedSpawnAtPosition(ent.Comp.Pod, xform.Coordinates);
         ent.Comp.BlobPods.Add(pod);
+        Dirty(ent);
         var blobPod = EnsureComp<BlobPodComponent>(pod);
         blobPod.Core = core;
         FillSmokeGas((pod, blobPod), coreComp.CurrentChem);

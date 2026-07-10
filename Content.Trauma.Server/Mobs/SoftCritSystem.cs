@@ -10,7 +10,7 @@ namespace Content.Trauma.Server.Mobs;
 /// <summary>
 /// Prevents screaming while in softcrit, you can only whisper chud.
 /// </summary>
-public sealed class SoftCritSystem : SharedSoftCritSystem
+public sealed partial class SoftCritSystem : SharedSoftCritSystem
 {
     public override void Initialize()
     {

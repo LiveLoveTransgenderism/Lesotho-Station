@@ -210,11 +210,10 @@
   - type: DynamicRuleCost
     cost: 200
 
-# Goobstation
 - type: entity
   abstract: true
   parent: BaseGameRule
-  id: BaseTraitorRuleNoObjectives
+  id: BaseTraitorRuleNoObjectives # Trauma - add NoObjectives, added objectives separately
   components:
   # <Trauma>
   - type: AntagPlayerEffects
@@ -227,6 +226,8 @@
   # TODO: uplink in yml
   - type: AntagSelection
     agentName: traitor-round-end-agent-name
+  - type: DynamicRuleCost
+    cost: 100
 
 - type: entity
   abstract: true

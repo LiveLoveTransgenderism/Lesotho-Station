@@ -106,7 +106,11 @@ public sealed partial class BlobCoreActionSystem : EntitySystem
         var placing = ProtoMan.Index(GrowthTile);
         var cost = placing.Cost;
         if (targetTileEmpty)
-            cost *= 2.5f;
+        {
+            // 2.5x
+            cost *= 5;
+            cost /= 2;
+        }
 
         if (!_core.TryUseAbility(core.AsNullable(), cost, location))
             return;
@@ -125,7 +129,7 @@ public sealed partial class BlobCoreActionSystem : EntitySystem
             location);
 
         core.Comp.NextAction = _timing.CurTime + _cooldown + TimeSpan.FromSeconds(Math.Abs(core.Comp.GrowRate));
-        Dirty(core);
+        DirtyField(core, core.Comp, nameof(BlobCoreComponent.NextAction));
     }
 
     private EntityUid? FindNearBlobTile(EntityCoordinates coords, Entity<MapGridComponent> grid)
@@ -169,7 +173,7 @@ public sealed partial class BlobCoreActionSystem : EntitySystem
             _effects.ApplyEffects(target, effects, user: ent.Comp.Observer, predicted: false);
 
         ent.Comp.NextAction = _timing.CurTime + _cooldown + TimeSpan.FromSeconds(Math.Abs(ent.Comp.AttackRate));
-        Dirty(ent);
+        DirtyField(ent, ent.Comp, nameof(BlobCoreComponent.NextAction));
         _audio.PlayPvs(ent.Comp.AttackSound, from, AudioParams.Default);
     }
 
@@ -194,7 +198,7 @@ public sealed partial class BlobCoreActionSystem : EntitySystem
 
         args.Handled = true;
         coreComp.NextAction = now + _cooldown;
-        Dirty(core, coreComp);
+        DirtyField(core, coreComp, nameof(BlobCoreComponent.NextAction));
 
         BlobInteract(ent, (core, coreComp), args);
     }

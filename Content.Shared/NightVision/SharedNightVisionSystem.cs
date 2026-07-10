@@ -14,7 +14,7 @@ public abstract partial class SharedNightVisionSystem : EntitySystem
     [Dependency] private SharedActionsSystem _actions = default!;
 
     [SubscribeLocalEvent]
-    private void OnStartup(Entity<NightVisionComponent> ent, ref ComponentStartup args)
+    private void OnMapInit(Entity<NightVisionComponent> ent, ref MapInitEvent args) // Trauma - use MapInit not startup, it adds an action...
     {
         if (ent.Comp.RelayOverlay)
             return;

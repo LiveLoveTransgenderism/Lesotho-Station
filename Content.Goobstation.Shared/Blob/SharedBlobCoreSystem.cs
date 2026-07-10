@@ -10,12 +10,9 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Destructible;
 using Content.Shared.Explosion.Components;
 using Content.Shared.Explosion.EntitySystems;
-using Content.Shared.FixedPoint;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Popups;
-using Content.Shared.Store;
-using Content.Shared.Store.Components;
 using Content.Shared.Weapons.Melee;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -31,7 +28,6 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
     [Dependency] private SharedActionsSystem _action = default!;
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
-    [Dependency] private SharedStoreSystem _store = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private EntityQuery<BlobCoreComponent> _query = default!;
     [Dependency] private EntityQuery<BlobFactoryComponent> _factoryQuery = default!;
@@ -41,7 +37,6 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
 
     private static readonly ProtoId<AlertPrototype> BlobHealth = "BlobHealth";
     private static readonly ProtoId<AlertPrototype> BlobResource = "BlobResource";
-    private static readonly ProtoId<CurrencyPrototype> BlobMoney = "BlobPoint";
 
     #region Events
 
@@ -54,10 +49,6 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
 
         ConnectBlobTile((ent, tile), ent.AsNullable(), (ent, node));
 
-        var store = EnsureComp<StoreComponent>(ent);
-        store.CurrencyWhitelist.Add(BlobMoney);
-        Dirty(ent, store);
-
         UpdateAllAlerts(ent.AsNullable());
         UpdateChem(ent);
 
@@ -66,9 +57,7 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
             if (_action.AddAction(ent.Owner, actionId) is { } action)
                 ent.Comp.Actions.Add(action);
         }
-        Dirty(ent);
-
-        ChangeBlobPoint(ent, ent.Comp.StartingMoney, store);
+        DirtyField(ent, ent.Comp, nameof(BlobCoreComponent.Actions));
     }
 
     [SubscribeLocalEvent]
@@ -85,17 +74,17 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
 
     #endregion
 
-    public void UpdateAllAlerts(Entity<BlobCoreComponent?> core, StoreComponent? store = null)
+    public void UpdateAllAlerts(Entity<BlobCoreComponent?> core)
     {
-        if (!Resolve(core, ref core.Comp, ref store))
+        if (!Resolve(core, ref core.Comp))
             return;
 
         if (core.Comp.Observer is not { } user)
             return;
 
         // This one for points
-        var pt = store.Balance.GetValueOrDefault(BlobMoney);
-        var pointsSeverity = (short) Math.Clamp(Math.Round(pt.Float() / 10f), 0, 51);
+        var pt = (float) core.Comp.CurrentPoints;
+        var pointsSeverity = (short) Math.Clamp(Math.Round(pt * 0.1f), 0, 51);
         _alerts.ShowAlert(user, BlobResource, pointsSeverity);
 
         // And this one for health.
@@ -114,7 +103,7 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
             return;
 
         ent.Comp.CurrentChem = newChem;
-        Dirty(ent);
+        DirtyField(ent, ent.Comp, nameof(BlobCoreComponent.CurrentChem));
 
         UpdateChem(ent.Comp);
     }
@@ -192,10 +181,6 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
         if (!Resolve(core, ref core.Comp))
             return false;
 
-        var proto = ProtoMan.Index(id);
-        if (!TryUseAbility(core, proto.Cost, coords))
-            return false; // brokie
-
         if (oldTile is { } old)
         {
             if (!Resolve(old, ref old.Comp) || old.Comp.Core != core.Owner)
@@ -204,6 +189,7 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
             PredictedQueueDel(old);
         }
 
+        var proto = ProtoMan.Index(id);
         var tile = PredictedSpawnAtPosition(proto.Entity, coords);
         var tileComp = TileQuery.Comp(tile);
 
@@ -240,7 +226,6 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
         {
             case "Factory":
                 node.Value.Comp.BlobFactory = tile;
-                Dirty(node.Value);
                 break;
             case "Resource":
                 node.Value.Comp.BlobResource = tile;
@@ -341,24 +326,16 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
             coords);
     }
 
-    public bool ChangeBlobPoint(Entity<BlobCoreComponent> core, FixedPoint2 amount, StoreComponent? store = null)
+    public bool ChangeBlobPoint(Entity<BlobCoreComponent> core, int amount)
     {
-        if (!Resolve(core, ref store))
+        var next = core.Comp.CurrentPoints + amount;
+        if (amount == 0 || next < 0) // no blob overdraft
             return false;
 
-        if (_store.TryAddCurrency(new Dictionary<string, FixedPoint2>
-            {
-                { BlobMoney, amount }
-            },
-            core,
-            store))
-        {
-            UpdateAllAlerts(core.AsNullable());
-
-            return true;
-        }
-
-        return false;
+        core.Comp.CurrentPoints = next;
+        DirtyField(core, core.Comp, nameof(BlobCoreComponent.CurrentPoints));
+        UpdateAllAlerts(core.AsNullable());
+        return true;
     }
 
     /// <summary>
@@ -367,14 +344,13 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
     /// <param name="core">Blob core that is going to lose points.</param>
     /// <param name="abilityCost">Cost of the ability.</param>
     /// <param name="coordinates">If not null, coordinates for popup to appear.</param>
-    /// <param name="store">StoreComponent</param>
-    public bool TryUseAbility(Entity<BlobCoreComponent?> core, FixedPoint2 abilityCost, EntityCoordinates? coordinates = null, StoreComponent? store = null)
+    public bool TryUseAbility(Entity<BlobCoreComponent?> core, int abilityCost, EntityCoordinates? coordinates = null)
     {
-        if (!Resolve(core, ref core.Comp, ref store))
+        if (!Resolve(core, ref core.Comp))
             return false;
 
         var observer = core.Comp.Observer;
-        var money = store.Balance.GetValueOrDefault(BlobMoney);
+        var money = core.Comp.CurrentPoints;
 
         if (observer == null)
             return false;
@@ -383,7 +359,7 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
         {
             _popup.PopupEntity(Loc.GetString(
                 "blob-not-enough-resources",
-                ("point", abilityCost.Int() - money.Int())),
+                ("point", abilityCost - money)),
                 observer.Value,
                 observer.Value,
                 PopupType.Large);
@@ -393,7 +369,7 @@ public abstract partial class SharedBlobCoreSystem : EntitySystem
         coordinates ??= Transform(observer.Value).Coordinates;
 
         _popup.PopupCoordinates(
-            Loc.GetString("blob-spent-resource", ("point", abilityCost.Int())),
+            Loc.GetString("blob-spent-resource", ("point", abilityCost)),
             coordinates.Value,
             observer.Value,
             PopupType.LargeCaution);

@@ -136,14 +136,14 @@ public abstract partial class SharedBlobObserverSystem : EntitySystem
         var newCore = PredictedSpawnAtPosition(coreTile.Entity, args.Target);
 
         ent.Comp.CanSplit = false;
-        Dirty(ent);
+        DirtyField(ent, ent.Comp, nameof(BlobCoreComponent.CanSplit));
         _action.RemoveAction(args.Action.AsNullable());
 
         if (TryComp<BlobCoreComponent>(newCore, out var newComp))
         {
             newComp.CanSplit = false;
             newComp.BlobTiles.Add(newCore);
-            Dirty(newCore, newComp);
+            DirtyField(newCore, newComp, nameof(BlobCoreComponent.CanSplit));
         }
 
         args.Handled = true;

@@ -52,7 +52,7 @@ public sealed partial class BlobCarrierSystem : SharedBlobCarrierSystem
         => TransformToBlob(uid);
 
     [SubscribeLocalEvent]
-    private void OnMapInit(Entity<BlobCarrierComponent> ent, MapInitEvent args)
+    private void OnMapInit(Entity<BlobCarrierComponent> ent, ref MapInitEvent args)
     {
         _language.UpdateEntityLanguages(ent.Owner);
         _action.AddAction(ent.Owner, ref ent.Comp.TransformToBlob, ActionTransformToBlob);

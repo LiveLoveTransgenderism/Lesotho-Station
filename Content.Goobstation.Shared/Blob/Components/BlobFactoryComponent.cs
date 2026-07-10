@@ -24,7 +24,7 @@ public sealed partial class BlobFactoryComponent : Component
     [DataField, AutoNetworkedField]
     public bool HasBlobbernaut;
 
-    [DataField]
+    [DataField, AutoNetworkedField]
     public List<EntityUid> BlobPods = new ();
 
     [DataField]

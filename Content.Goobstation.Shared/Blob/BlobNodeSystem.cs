@@ -26,11 +26,11 @@ public sealed partial class BlobNodeSystem : EntitySystem
     private HashSet<Entity<BlobMobComponent>> _mobs = new();
     private HashSet<Entity<BlobTileComponent>> _tiles = new();
 
-    public void PulseNode(Entity<BlobNodeComponent> ent)
+    public void PulseNode(Entity<BlobNodeComponent> ent, Entity<BlobCoreComponent> core, BlobChemPrototype chem)
     {
         var xform = Transform(ent);
 
-        var ev = new BlobSpecialPulseEvent();
+        var ev = new BlobSpecialPulseEvent(core, chem);
         if (ent.Comp.BlobFactory is { } factory)
             RaiseLocalEvent(factory, ref ev);
         if (ent.Comp.BlobResource is { } resource)
@@ -70,7 +70,7 @@ public sealed partial class BlobNodeSystem : EntitySystem
             RaiseLocalEvent(tile, ref ev);
         }
 
-        PulseNode(ent);
+        PulseNode(ent, core, chem);
     }
 
     public override void Update(float frameTime)

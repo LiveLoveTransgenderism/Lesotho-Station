@@ -9,7 +9,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Goobstation.Shared.Blob.Components;
 
 [RegisterComponent, NetworkedComponent]
-[AutoGenerateComponentPause, AutoGenerateComponentState]
+[AutoGenerateComponentPause, AutoGenerateComponentState(fieldDeltas: true)]
 public sealed partial class BlobCoreComponent : Component
 {
     #region Live Data
@@ -27,7 +27,7 @@ public sealed partial class BlobCoreComponent : Component
     [AutoNetworkedField, AutoPausedField]
     public TimeSpan NextAction;
 
-    [ViewVariables]
+    [DataField, AutoNetworkedField]
     public ProtoId<BlobChemPrototype> CurrentChem = "ReactiveSpines";
 
     #endregion
@@ -37,8 +37,8 @@ public sealed partial class BlobCoreComponent : Component
     [DataField]
     public FixedPoint2 CoreBlobTotalHealth = 400;
 
-    [DataField]
-    public float StartingMoney = 250f; // enough for 2 resource nodes and a bit of defensive action
+    [DataField, AutoNetworkedField]
+    public int CurrentPoints = 250; // start with enough for 2 resource nodes and a bit of defensive action
 
     [DataField]
     public float AttackRate = 0.3f;
@@ -46,7 +46,7 @@ public sealed partial class BlobCoreComponent : Component
     [DataField]
     public float GrowRate = 0.1f;
 
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool CanSplit = true;
 
     #endregion
@@ -57,19 +57,19 @@ public sealed partial class BlobCoreComponent : Component
     public int ResourceBlobsTotal;
 
     [DataField]
-    public FixedPoint2 AttackCost = 4;
+    public int AttackCost = 4;
 
     [DataField]
-    public FixedPoint2 BlobbernautCost = 60;
+    public int BlobbernautCost = 60;
 
     [DataField]
-    public FixedPoint2 SplitCoreCost = 400;
+    public int SplitCoreCost = 400;
 
     [DataField]
-    public FixedPoint2 SwapCoreCost = 200;
+    public int SwapCoreCost = 200;
 
     [DataField]
-    public FixedPoint2 SwapChemCost = 70;
+    public int SwapChemCost = 70;
 
     #endregion
 
