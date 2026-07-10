@@ -11278,3 +11278,10 @@ Entries:
   id: 1247
   time: '2026-07-08T16:20:13.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3482
+- author: Graves
+  changes:
+  - type: Add
+    message: Returned zombie bundle to the commander uplink! Go nuts, Gorlex!
+  id: 1248
+  time: '2026-07-10T03:47:58.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3495
