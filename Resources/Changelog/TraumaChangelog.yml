@@ -11352,3 +11352,10 @@ Entries:
   id: 1253
   time: '2026-07-10T12:52:15.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3502
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Xeno queen roar now checks for line of sight.
+  id: 1254
+  time: '2026-07-10T13:31:31.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3504
