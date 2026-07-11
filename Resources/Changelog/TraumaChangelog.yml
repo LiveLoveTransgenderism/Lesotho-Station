@@ -11418,3 +11418,12 @@ Entries:
   id: 1261
   time: '2026-07-11T14:46:22.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3517
+- author: ImWeax
+  changes:
+  - type: Add
+    message: You can now drink bleach to kill gutworms.
+  - type: Add
+    message: You can also take actual deworming medicine.
+  id: 1262
+  time: '2026-07-11T20:49:38.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3399
