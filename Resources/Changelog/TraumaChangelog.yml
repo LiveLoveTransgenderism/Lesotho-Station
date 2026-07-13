@@ -11456,3 +11456,10 @@ Entries:
   id: 1265
   time: '2026-07-12T23:38:03.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3539
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed detailed examine items in chat rendering badly.
+  id: 1266
+  time: '2026-07-13T02:03:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3540
