@@ -11509,3 +11509,14 @@ Entries:
   id: 1271
   time: '2026-07-13T18:46:56.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3466
+- author: Aviu
+  changes:
+  - type: Add
+    message: Moths got innate tackle (dash) and tackle bonus tied to wings.
+  - type: Fix
+    message: >-
+      Fix tackles and stun baton delayed knockdown hardstunning mobs that can't
+      be knocked down.
+  id: 1272
+  time: '2026-07-13T18:48:55.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3500
