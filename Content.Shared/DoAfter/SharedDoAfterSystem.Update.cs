@@ -215,7 +215,7 @@ public abstract partial class SharedDoAfterSystem : EntitySystem
                 return true;
 
             // Whether the distance between the effective movement entity and the target(if any) has changed too much.
-            if (args.Target is { } target && Transform(target).Coordinates.TryDistance(EntityManager, movementXform.Coordinates, out var distance))
+            if (args.Target is { } target && Exists(target) && Transform(target).Coordinates.TryDistance(EntityManager, movementXform.Coordinates, out var distance)) // Trauma - check if it exists
             {
                 if (Math.Abs(distance - doAfter.TargetDistance) > args.MovementThreshold)
                     return true;
