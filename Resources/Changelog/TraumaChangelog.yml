@@ -11536,3 +11536,14 @@ Entries:
   id: 1274
   time: '2026-07-14T06:18:22.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3548
+- author: TechnicFighter
+  changes:
+  - type: Fix
+    message: Fixed your bag getting bricked, and auto closing.
+  - type: Fix
+    message: Fixed the Flesh Shield not having inhand sprites.
+  - type: Fix
+    message: Fixed the Greatshield not having inhand sprites.
+  id: 1275
+  time: '2026-07-15T04:04:24.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3556
