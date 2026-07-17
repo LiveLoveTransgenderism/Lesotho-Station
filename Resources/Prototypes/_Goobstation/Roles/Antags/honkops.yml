@@ -40,7 +40,7 @@
     back: ClothingBackpackDuffelSyndicate
     mask: ClothingMaskClownUnremoveable
     eyes: ClothingEyesHudSyndicate
-    ears: ClothingHeadsetAltSyndicate
+    ears: ClothingHeadsetAltSyndicateNuclear # Lesotho nuclear channel
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesClownLarge
     id: SyndiPDA

@@ -114,7 +114,7 @@
     mask: ClothingMaskGasSyndicate
     head: ClothingHeadHatBeret
     eyes: ClothingEyesHudSyndicate
-    ears: ClothingHeadsetAltSyndicate
+    ears: ClothingHeadsetAltSyndicateCommander
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterCoatSyndieCapArmored
     shoes: ClothingShoesBootsSyndieFilled

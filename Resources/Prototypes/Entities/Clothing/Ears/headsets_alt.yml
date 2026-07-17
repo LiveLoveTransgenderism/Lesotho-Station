@@ -3,13 +3,15 @@
   parent: ClothingHeadset
   id: ClothingHeadsetAlt
   name: headset
-  description: An updated, modular intercom that fits over the head. Takes encryption keys.
+  description: An updated, modular intercom that fits over the head. Takes more encryption keys and protects your ears.
   components:
   - type: Sprite
     state: icon_alt
   - type: Clothing
     equippedPrefix: alt
   - type: FlashSoundSuppression # Goobstation
+  - type: EncryptionKeyHolder # Lesotho
+    keySlots: 6
 
 - type: entity
   parent: [ClothingHeadsetAltLoudspeaker, BaseCommandContraband] # Goobstation
@@ -28,7 +30,7 @@
     sprite: Clothing/Ears/Headsets/cargo.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband] # Goobstation
+  parent: [ClothingHeadsetAltLoudspeaker, BaseCentcommContraband] # Goobstation+Lesotho add loudspeaker and make CC contra because some 0iq made it command
   id: ClothingHeadsetAltCentCom
   name: CentComm over-ear headset
   components:
@@ -126,11 +128,9 @@
   parent: [ClothingHeadsetAlt, BaseSyndicateContraband]
   id: ClothingHeadsetAltSyndicate
   name: blood-red over-ear headset
-  description: An updated, modular syndicate intercom that fits over the head and takes encryption keys (there are 5 key slots.).
+  description: An updated, modular syndicate intercom that fits over the head and takes even more encryption keys.
   components:
   - type: Headset
-  - type: EncryptionKeyHolder
-    keySlots: 5
   - type: ContainerFill
     containers:
       key_slots:
@@ -146,8 +146,6 @@
   name: freelancer's over-ear headset
   components:
     - type: Headset
-    - type: EncryptionKeyHolder
-      keySlots: 5
     - type: ContainerFill
       containers:
         key_slots:
@@ -158,17 +156,16 @@
       sprite: Clothing/Ears/Headsets/freelance.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseMagicalContraband]
+  parent: [ClothingHeadsetAltLoudspeaker, BaseMagicalContraband] # Lesotho add loudspeaker
   id: ClothingHeadsetAltWizard
   name: wizard's over-ear headset
+  description: A magical band that goes over the head, it is covered in runes and mimics the look of a real headset.
   components:
     - type: Headset
-    - type: EncryptionKeyHolder
-      keySlots: 5
     - type: ContainerFill
       containers:
         key_slots:
-        - EncryptionKeyStationMaster
+        - EncryptionKeyWizard # Lesotho
     - type: Sprite
       sprite: Clothing/Ears/Headsets/wizard.rsi
     - type: Clothing

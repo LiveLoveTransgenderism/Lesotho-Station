@@ -1,0 +1,99 @@
+- type: entity
+  parent: ClothingHeadsetAltSyndicate
+  id: ClothingHeadsetAltSyndicateNuclear
+  name: blood-red nuclear over-ear headset
+  description: A special syndicate headset for nukeops.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyNuclear
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: [ClothingHeadsetAltLoudspeaker, BaseCentcommContraband]
+  id: ClothingHeadsetAltERT
+  name: ERT over-ear headset
+  description: A special centcom headset for ERT.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyERT
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+#admin team headsets
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltAdmin1
+  suffix: team
+  name: Team1 over-ear headset
+  description: A private headset for a team.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAdmin1
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingHeadsetAltAdmin1
+  id: ClothingHeadsetAltAdmin2
+  name: Team2 over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAdmin2
+
+- type: entity
+  parent: ClothingHeadsetAltAdmin1
+  id: ClothingHeadsetAltAdmin3
+  name: Team3 over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAdmin3
+
+- type: entity
+  parent: ClothingHeadsetAltAdmin1
+  id: ClothingHeadsetAltAdmin4
+  name: Team4 over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAdmin4
+
+- type: entity
+  parent: ClothingHeadsetAltLoudspeaker
+  id: ClothingHeadsetAltAdminCommand
+  suffix: DEBUG, team
+  name: Team Commander over-ear headset
+  description: A headset that allows speaking to all the teams at once.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAdmin4
+      - EncryptionKeyAdmin3
+      - EncryptionKeyAdmin2
+      - EncryptionKeyAdmin1
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag

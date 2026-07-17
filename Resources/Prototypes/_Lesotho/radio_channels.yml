@@ -1,0 +1,62 @@
+- type: radioChannel
+  id: RadioERT
+  name: chat-radio-ert
+  keycode: ','
+  frequency: 837
+  color: "#009698"
+  longRange: true
+
+- type: radioChannel
+  id: RadioDS
+  name: chat-radio-ds
+  keycode: '.'
+  color: "#32174d"
+  longRange: true
+
+- type: radioChannel
+  id: RadioNuclear
+  name: chat-radio-nuclear
+  keycode: '/'
+  frequency: 636
+  color: "#b22222"
+  longRange: true
+
+- type: radioChannel
+  id: RadioWizard
+  name: chat-radio-wizard
+  keycode: '~'
+  color: "#800080"
+  longRange: true
+
+# radios for admin spawns, thank me later
+- type: radioChannel
+  id: RadioAdmin1
+  name: chat-radio-adminprivate1
+  keycode: '!'
+  frequency: 99991
+  color: "#253529"
+  longRange: true
+
+- type: radioChannel
+  id: RadioAdmin2
+  name: chat-radio-adminprivate2
+  keycode: '@'
+  frequency: 99992
+  color: "#232b2b"
+  longRange: true
+
+- type: radioChannel
+  id: RadioAdmin3
+  name: chat-radio-adminprivate3
+  keycode: '#'
+  frequency: 99993
+  color: "#2f4f4f"
+  longRange: true
+
+- type: radioChannel
+  id: RadioAdmin4
+  name: chat-radio-adminprivate4
+  keycode: '$'
+  frequency: 99994
+  color: "#2f4f4f"
+  longRange: true

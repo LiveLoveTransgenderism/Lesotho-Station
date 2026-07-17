@@ -1,0 +1,188 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyInterception
+  name: interception encryption key
+  description: A highly modified encryption key, now a decryption key that also includes standard broadband. Doesnt include ERT or Syndicate.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Freelance
+    - Handheld
+    - CentCom
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: synd_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyERT
+  name: ert encryption key
+  description: A top secret radio channel for ERT, includes standard broadband.
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioERT
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Handheld
+    - Supply
+    - CentCom
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: nano_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyDS
+  name: unknown encryption key
+  description: ???
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioDS
+    - RadioERT
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Freelance
+    - Handheld
+    - CentCom
+    - Syndicate
+    - Revolutionary
+    - RadioNuclear
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gold
+    - state: nano_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyNuclear
+  name: nuclear encryption key
+  description: Radio key for people who need to get that fuggin disk!
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioNuclear
+    - Syndicate
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gold
+    - state: synd_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyWizard
+  name: magical encryption key
+  description: A small enchanted stone chip that acts like a radio key.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Freelance
+    - Handheld
+    - CentCom
+    - Syndicate
+    - Revolutionary
+    - RadioNuclear
+    - RadioWizard
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+
+# admin private radios
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyAdmin1
+  suffix: DEBUG, team
+  name: private encryption key
+  description: A private radio channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioAdmin1
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_rusted
+    - state: common_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyAdmin2
+  suffix: DEBUG, team
+  name: private encryption key
+  description: A private radio channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioAdmin2
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_rusted
+    - state: common_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyAdmin3
+  suffix: DEBUG, team
+  name: private encryption key
+  description: A private radio channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioAdmin3
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_rusted
+    - state: common_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyAdmin4
+  suffix: DEBUG, team
+  name: private encryption key
+  description: A private radio channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - RadioAdmin4
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_rusted
+    - state: common_label
