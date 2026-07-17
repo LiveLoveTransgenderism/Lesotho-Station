@@ -30,7 +30,7 @@
     mask: ClothingMaskGasERT
     neck: ExecutiveIDCard # Executive Access!
     eyes: ClothingEyesGlassesMedSec # Better glasses
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitCBURN
     shoes: ClothingShoesBootsMagEmergencyResponseTeam # Goobstation

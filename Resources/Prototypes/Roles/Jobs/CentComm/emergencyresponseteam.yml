@@ -38,7 +38,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmourDurathread # Durathread armor is cooler.
     id: ERTLeaderPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltAssaultFilled # Goobstation
     pocket1: TelescopicBatonAdvanced # Trauma # Trauma
     pocket2: FlashlightSeclite
@@ -63,7 +63,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTLeader
     id: ERTLeaderPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltAssaultFilled # Goobstation
     pocket1: TelescopicBatonAdvanced # Trauma # Trauma
     pocket2: FlashlightSeclite
@@ -145,7 +145,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmourDurathread # Durathread armor is cooler.
     id: ERTChaplainPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltStorageWaistbag
     pocket1: TelescopicBatonAdvanced # Trauma
     pocket2: DrinkWaterBottleFull
@@ -176,7 +176,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTChaplain
     id: ERTChaplainPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltMilitaryWebbingERT
     pocket2: CombatKnife
   storage:
@@ -244,7 +244,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmourDurathread # Durathread armor is cooler.
     id: ERTEngineerPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     pocket1: TelescopicBatonAdvanced # Trauma
     pocket2: GasAnalyzer
   storage:
@@ -272,7 +272,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTEngineer
     id: ERTEngineerPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltMilitaryWebbingERT
     pocket2: CombatKnife
   storage:
@@ -365,7 +365,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmourDurathread # Durathread armor is cooler.
     id: ERTSecurityPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltAssaultFilled # Goobstation
     pocket1: TelescopicBatonAdvanced # Trauma
     pocket2: FlashlightSeclite
@@ -390,7 +390,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltAssaultFilled # Goobstation
     pocket1: TelescopicBatonAdvanced # Trauma
     pocket2: FlashlightSeclite
@@ -418,7 +418,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltMilitaryWebbingERT
     pocket2: CombatKnife
     suitstorage: WeaponRifleLecter
@@ -545,7 +545,7 @@
     gloves: ClothingHandsGlovesNitrile
     outerClothing: ClothingOuterArmourDurathread # Durathread armor is cooler.
     id: ERTMedicPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltSecurityWebbingFilledMedical # Fancier
     pocket1: Flare
     pocket2: TelescopicBatonAdvanced # Trauma
@@ -574,7 +574,7 @@
     gloves: ClothingHandsGlovesNitrile
     outerClothing: ClothingOuterHardsuitERTMedical
     id: ERTMedicPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltSecurityWebbingFilledMedical # Fancier
     pocket1: TelescopicBatonAdvanced # Trauma
   storage:
@@ -651,7 +651,7 @@
     gloves: ClothingHandsGlovesColorPurple
     outerClothing: ClothingOuterArmourDurathread # Durathread armor is cooler.
     id: ERTJanitorPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     pocket1: TelescopicBatonAdvanced # Trauma
   storage:
     back:
@@ -673,7 +673,7 @@
     gloves: ClothingHandsGlovesColorPurple
     outerClothing: ClothingOuterHardsuitERTJanitor
     id: ERTJanitorPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltERT
     belt: ClothingBeltMilitaryWebbingERT # Trauma - fit belt shit
     pocket1: TelescopicBatonAdvanced # Trauma
   storage:

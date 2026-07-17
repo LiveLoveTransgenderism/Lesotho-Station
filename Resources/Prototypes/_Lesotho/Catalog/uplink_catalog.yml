@@ -1,0 +1,29 @@
+- type: listing
+  id: UplinkSyndiInterception
+  name: uplink-syndicate-interception-radio-name
+  description: uplink-syndicate-interception-radio-desc
+  productEntity: EncryptionKeyInterception
+  cost:
+    Telecrystal: 45
+  categories:
+  - UplinkDeception
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkSyndiInterceptionNuke
+  name: uplink-syndicate-interception-radio-name
+  description: uplink-syndicate-interception-radio-desc
+  productEntity: EncryptionKeyInterception
+  cost:
+    Telecrystal: 55
+  categories:
+  - UplinkDeception
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

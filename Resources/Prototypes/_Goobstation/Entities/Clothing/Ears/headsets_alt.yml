@@ -10,7 +10,7 @@
     affectRadio: true
 
 - type: entity
-  parent: [ClothingHeadsetAltSyndicate, ClothingHeadsetAltLoudspeaker]
+  parent: [ClothingHeadsetAltSyndicateNuclear, ClothingHeadsetAltLoudspeaker]
   id: ClothingHeadsetAltSyndicateCommander
   name: blood-red commander over-ear headset
 
@@ -61,8 +61,7 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCentCom
-      - EncryptionKeyStationMaster
+      - EncryptionKeyDS
   - type: Sprite
     sprite: _Goobstation/Clothing/Ears/Headsets/deathsquad.rsi
   - type: Clothing

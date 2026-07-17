@@ -60,7 +60,7 @@
     gloves: ClothingHandsGlovesCombat
     id: SyndiPDANukie
     belt: ClothingBeltSecurityWebbingContractorFilled
-    ears: ClothingHeadsetAltSyndicate
+    ears: ClothingHeadsetAltSyndicateNuclear
     back: ClothingModsuitContractor
     outerClothing: ClothingOuterArmorBasicSlim
     suitstorage: JetpackContractorFilled
