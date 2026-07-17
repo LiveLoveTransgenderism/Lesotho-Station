@@ -11577,3 +11577,10 @@ Entries:
   id: 1279
   time: '2026-07-17T07:08:04.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3561
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed changeling fleshmend not healing anything.
+  id: 1280
+  time: '2026-07-17T08:45:46.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3576
