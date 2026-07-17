@@ -11570,3 +11570,10 @@ Entries:
   id: 1278
   time: '2026-07-17T05:12:37.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3562
+- author: Aviu
+  changes:
+  - type: Tweak
+    message: Fire and barotrauma buffed, explosions nerfed.
+  id: 1279
+  time: '2026-07-17T07:08:04.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3561
