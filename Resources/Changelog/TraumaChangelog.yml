@@ -11668,3 +11668,10 @@ Entries:
   id: 1288
   time: '2026-07-17T20:32:39.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3586
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Parrying now uses athletics instead of unarmed training.
+  id: 1289
+  time: '2026-07-17T20:46:52.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3594
