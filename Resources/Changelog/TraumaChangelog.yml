@@ -11556,3 +11556,10 @@ Entries:
   id: 1276
   time: '2026-07-15T23:29:03.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3554
+- author: Aviu00
+  changes:
+  - type: Fix
+    message: Fixed Late Arrivals station trait preventing antags from rolling.
+  id: 1277
+  time: '2026-07-17T04:53:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3572
