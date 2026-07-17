@@ -10,7 +10,7 @@
   id: RadioDS
   name: chat-radio-ds
   keycode: '.'
-  color: "#32174d"
+  color: "#5218fa"
   longRange: true
 
 - type: radioChannel
@@ -34,7 +34,7 @@
   name: chat-radio-adminprivate1
   keycode: '!'
   frequency: 99991
-  color: "#253529"
+  color: "#87a96b"
   longRange: true
 
 - type: radioChannel
@@ -42,7 +42,7 @@
   name: chat-radio-adminprivate2
   keycode: '@'
   frequency: 99992
-  color: "#232b2b"
+  color: "#80daeb"
   longRange: true
 
 - type: radioChannel
@@ -50,7 +50,7 @@
   name: chat-radio-adminprivate3
   keycode: '#'
   frequency: 99993
-  color: "#2f4f4f"
+  color: "#ffd800"
   longRange: true
 
 - type: radioChannel
@@ -58,5 +58,5 @@
   name: chat-radio-adminprivate4
   keycode: '$'
   frequency: 99994
-  color: "#2f4f4f"
+  color: "#f28500"
   longRange: true
