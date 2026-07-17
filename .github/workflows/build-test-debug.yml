@@ -205,13 +205,14 @@ jobs:
 
   ci-success:
     name: Build & Test Debug
-    needs: [build, test-unit, test-main, test-maps, test-gamerules, test-map-render]
+    needs: [build, build-release, test-unit, test-main, test-maps, test-gamerules, test-map-render]
     runs-on: ubuntu-latest
     if: always()
     steps:
       - name: CI succeeded
         run: |
           if [[ "${{ needs.build.result }}" != "success" ||
+                "${{ needs.build-release.result }}" != "success" ||
                 "${{ needs.test-unit.result }}" != "success" ||
                 "${{ needs.test-main.result }}" != "success" ||
                 "${{ needs.test-maps.result }}" != "success" ||
