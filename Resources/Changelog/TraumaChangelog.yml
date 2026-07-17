@@ -11649,3 +11649,22 @@ Entries:
   id: 1287
   time: '2026-07-17T15:06:23.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3588
+- author: Aviu
+  changes:
+  - type: Fix
+    message: Fixed mirror maids being able to jaunt anywhere.
+  - type: Fix
+    message: Mirror maid jaunt exit now denies their next jaunt for 5 seconds.
+  - type: Tweak
+    message: Bible smite now works on melee hit and not interact.
+  - type: Tweak
+    message: Mobs have brighter night vision, it was way too dark
+  - type: Tweak
+    message: Heretic summons have much more stamina.
+  - type: Remove
+    message: >-
+      Removed reality fracture fishing, I have changed my mind. The mechanic is
+      too bad and not suitable for heretic gameplay loop.
+  id: 1288
+  time: '2026-07-17T20:32:39.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3586
