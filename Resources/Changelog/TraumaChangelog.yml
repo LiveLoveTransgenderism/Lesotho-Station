@@ -11700,3 +11700,12 @@ Entries:
   id: 1292
   time: '2026-07-18T06:28:29.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3596
+- author: Wizard25671
+  changes:
+  - type: Remove
+    message: >-
+      Removed the guaranteed extra traitor spawns from main gamemode Shadowling,
+      Heretic, Cosmic Cult, and Blob
+  id: 1293
+  time: '2026-07-18T08:44:09.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3603
