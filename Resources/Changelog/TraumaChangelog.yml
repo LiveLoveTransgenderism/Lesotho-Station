@@ -11691,3 +11691,12 @@ Entries:
   id: 1291
   time: '2026-07-18T06:25:13.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3601
+- author: Graves
+  changes:
+  - type: Tweak
+    message: >-
+      Hell found out the prideful demon was using steroids. He has been
+      punished.
+  id: 1292
+  time: '2026-07-18T06:28:29.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3596
