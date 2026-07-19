@@ -11709,3 +11709,10 @@ Entries:
   id: 1293
   time: '2026-07-18T08:44:09.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3603
+- author: Aviu
+  changes:
+  - type: Add
+    message: Automation no longer needs to be researched.
+  id: 1294
+  time: '2026-07-19T15:42:08.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3615
