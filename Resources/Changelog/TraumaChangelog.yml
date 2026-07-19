@@ -11723,3 +11723,10 @@ Entries:
   id: 1295
   time: '2026-07-19T17:56:25.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3621
+- author: bobbble
+  changes:
+  - type: Tweak
+    message: Minor decapoid displacement changes.
+  id: 1296
+  time: '2026-07-19T18:31:27.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3570
