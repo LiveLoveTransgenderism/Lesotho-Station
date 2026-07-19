@@ -56,6 +56,8 @@
   table: !type:AllSelector
     children:
     - id: Stunbaton
+    - id: Flash
+    - id: PepperSpray
     - id: Handcuffs
       amount: 2
     - id: HoloprojectorSecurity

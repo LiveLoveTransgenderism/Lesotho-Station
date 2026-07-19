@@ -64,8 +64,8 @@
   table: !type:AllSelector
     children:
     - id: ClothingHeadsetAltSecurityRegular
-    - id: PepperSpray
-    - id: WeaponLaserSidearm
+    #- id: PepperSpray #Lesotho - Belt
+    #- id: WeaponLaserSidearm #Lesotho - No.
     - id: ClothingHandsGlovesSecurity
 
 - type: entity
