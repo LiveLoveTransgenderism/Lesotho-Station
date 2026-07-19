@@ -11716,3 +11716,10 @@ Entries:
   id: 1294
   time: '2026-07-19T15:42:08.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3615
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed martial arts not working.
+  id: 1295
+  time: '2026-07-19T17:56:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3621
