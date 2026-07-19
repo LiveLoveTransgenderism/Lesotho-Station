@@ -1,0 +1,27 @@
+- type: entity
+  parent: [ClothingHandsGlovesPowerglove, BaseSecurityContraband]
+  id: ClothingHandsGlovesSecurityPowerglove
+  name: security power gloves
+  description: Emergency backup weapon for security, not very good but can save your life.
+  components:
+  - type: WeaponClass
+    class: Unarmed # still hitting people
+  - type: StaminaDamageOnHit
+    damage: 8
+    lightAttackDamageMultiplier: 1.5
+  - type: Item
+    size: Small
+    storedRotation: -90
+  - type: MeleeWeapon
+    mustBeEquippedToUse: true
+    canWideSwing: true
+    attackRate: 1
+    animationRotation: -135
+    wideAnimationRotation: 0
+    damage:
+      types:
+        Blunt: 5
+    angle: 0
+    animation: WeaponArcThrust
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg

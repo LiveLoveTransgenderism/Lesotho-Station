@@ -244,7 +244,7 @@
 - type: entity
   parent: ClothingHandsBase
   id: ClothingHandsGlovesPowerglove
-  name: power gloves
+  name: broken power gloves
   description: Now I'm playin' with power! Wait... they're turned off. #Use "Now I'm playin' with power! BAM!" for when they're turned on
   components:
   - type: Sprite
