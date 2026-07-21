@@ -11775,3 +11775,10 @@ Entries:
   id: 1301
   time: '2026-07-21T22:34:09.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/631
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed carp callers not working.
+  id: 1302
+  time: '2026-07-21T23:54:18.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3657
