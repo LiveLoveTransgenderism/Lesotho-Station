@@ -11755,3 +11755,10 @@ Entries:
   id: 1299
   time: '2026-07-21T13:08:01.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3649
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed killdozer getting filled with casings when you use its mosin.
+  id: 1300
+  time: '2026-07-21T22:31:19.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3655
