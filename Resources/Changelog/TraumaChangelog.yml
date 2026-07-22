@@ -11821,3 +11821,10 @@ Entries:
   id: 1307
   time: '2026-07-22T23:31:24.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3643
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed not being able to automate industrial grinders with reagent pumps.
+  id: 1308
+  time: '2026-07-22T23:37:11.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3676
