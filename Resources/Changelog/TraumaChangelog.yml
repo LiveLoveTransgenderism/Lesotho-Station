@@ -11782,3 +11782,10 @@ Entries:
   id: 1302
   time: '2026-07-21T23:54:18.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3657
+- author: jshoe2
+  changes:
+  - type: Fix
+    message: Fixed atmos fire helmet and fire helmet protecting torso instead of head
+  id: 1303
+  time: '2026-07-22T16:45:11.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3661
