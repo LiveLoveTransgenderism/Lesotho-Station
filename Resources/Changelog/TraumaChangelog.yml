@@ -11803,3 +11803,10 @@ Entries:
   id: 1305
   time: '2026-07-22T22:18:59.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3671
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fishing ponds no longer phase through walls.
+  id: 1306
+  time: '2026-07-22T23:18:24.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3675
