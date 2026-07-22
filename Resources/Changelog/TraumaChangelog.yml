@@ -11810,3 +11810,14 @@ Entries:
   id: 1306
   time: '2026-07-22T23:18:24.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3675
+- author: Graves
+  changes:
+  - type: Remove
+    message: Removed Slop-I mean sleep mode on the wonderprod.
+  - type: Tweak
+    message: Made the cuff mode on the wonderprod stronger.
+  - type: Tweak
+    message: Barbwire Handcuffs are now properly contraband.
+  id: 1307
+  time: '2026-07-22T23:31:24.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3643
