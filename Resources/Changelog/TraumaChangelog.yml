@@ -11828,3 +11828,10 @@ Entries:
   id: 1308
   time: '2026-07-22T23:37:11.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3676
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed wizard's bind soul spell not letting you resurrect when it should.
+  id: 1309
+  time: '2026-07-23T00:44:58.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3678
