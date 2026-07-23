@@ -11849,3 +11849,28 @@ Entries:
   id: 1311
   time: '2026-07-23T03:42:14.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3662
+- author: Aviu
+  changes:
+  - type: Add
+    message: Added toggle helmet action back for clothes.
+  - type: Add
+    message: Knives wide swing again but with 25% damage penalty.
+  - type: Fix
+    message: Fixed hristov and burner dealing more damage than intended.
+  - type: Tweak
+    message: Fire sharks move slower.
+  - type: Tweak
+    message: Flesh worm got thermal vision and healing rate from eating arms increased.
+  - type: Fix
+    message: Fixed flesh stalker not having thermal vision.
+  - type: Fix
+    message: Fix wizard lich ensouled items being indestructible.
+  - type: Tweak
+    message: >-
+      Xray projectiles have a limit to penetration and their damage drops when
+      penetrating stuff.
+  - type: Tweak
+    message: Nutripump implanter only works on humanoids now.
+  id: 1312
+  time: '2026-07-23T19:06:55.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3685
