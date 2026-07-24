@@ -288,7 +288,8 @@
   cost:
     Telecrystal: 10 # Trauma - was 1, 5x and doubled because it's pretty strong
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions:
   - !type:StoreWhitelistCondition
     blacklist: # Trauma - inverted, there's a nukie listing separately
@@ -303,7 +304,7 @@
   cost:
     Telecrystal: 4 # Trauma - was 1, 5x less expensive because it's a smoke grenade
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
@@ -319,12 +320,12 @@
     Telecrystal: 24 # Trauma - was 6, 5x and less expensive
   categories:
     - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
       tags:
       - NukeOpsUplink
-
 
 - type: listing
   id: UplinkSupermatterGrenade
@@ -335,6 +336,7 @@
     Telecrystal: 20 # Trauma - was 4, 5x
   categories:
     - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
@@ -351,12 +353,16 @@
     Telecrystal: 15 # Trauma - was 4, 5x and less expensive to promote use
   categories:
     - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions:
   - !type:BuyerWhitelistCondition
     blacklist:
       components:
       - SurplusBundle
-
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
 
 - type: listing
   id: UplinkC4
@@ -366,13 +372,13 @@
   cost:
     Telecrystal: 8 # Trauma - was 2, 5x and less expensive
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
       tags:
       - NukeOpsUplink
-
 
 #- type: listing # Goobstation - this is boring, let's let nukies use nades they want by making everything cheap instead
 #  id: UplinkGrenadierRig
@@ -397,7 +403,8 @@
   cost:
     Telecrystal: 48 # Trauma - was 12, 5x you're buying in bulk, so you get a 25% discount
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
@@ -412,7 +419,8 @@
   cost:
     Telecrystal: 5 # Trauma - was 2, 5x implanter is 10 and infinitely better
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
@@ -428,7 +436,13 @@
   cost:
     Telecrystal: 12 # Trauma - was 4, 5x and less expensive to promote use
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
 
 - type: listing
   id: UplinkSyndicateBomb
@@ -469,7 +483,8 @@
   cost:
     Telecrystal: 8 # Trauma - was 4, 5x and less expensive
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
@@ -484,7 +499,8 @@
   cost:
     Telecrystal: 8 # Trauma - was 4, 5x and less expensive
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
+  restockTime: 300 # Trauma
   conditions: # Goob, two times cheaper for nukies
   - !type:StoreWhitelistCondition
     blacklist:
@@ -1056,7 +1072,7 @@
   cost:
     Telecrystal: 32 # Trauma - was 8, 5x and less expensive due to how shit it is
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
   restockTime: 1800 # Trauma - pre 30 minute powersink is no more
 
 # Goob - Not buyable anymore in favor of the custom lawboard.
@@ -1974,6 +1990,7 @@
     Telecrystal: 100 # Trauma - was 20, 5x
   categories:
   - UplinkJob
+  restockTime: 300
   conditions:
   - !type:BuyerJobCondition
     whitelist:
