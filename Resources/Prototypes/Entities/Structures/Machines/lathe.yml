@@ -678,12 +678,8 @@
     - ClothingService
     - WinterCoats
     - Ties
-    - Scarves
     - Carpets
     - Bedsheets
-    # Goobstation Packs
-    #- ClothingCasualJumpsuits #Lesotho
-    #- ClothingCommandSummer #Lesotho
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
