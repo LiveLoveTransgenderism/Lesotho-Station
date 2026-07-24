@@ -211,13 +211,6 @@
   id: ClothingUniformJumpsuitLawyerBlack
   result: ClothingUniformJumpsuitLawyerBlack
 
-## Librarian
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitMilitaryService #Lesotho
-  result: ClothingUniformJumpsuitMilitaryService #Lesotho
-
 ## Medical Doctor
 
 - type: latheRecipe
