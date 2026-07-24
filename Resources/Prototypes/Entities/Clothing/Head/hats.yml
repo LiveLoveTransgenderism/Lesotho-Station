@@ -275,7 +275,7 @@
 
 - type: entity
   parent: [ ClothingHeadHatArmoredBeret, ClothingHeadHatBeretRND, BaseCommandContraband ] # Trauma - armor
-  id: ClothingHeadHatCaptain
+  id: ClothingHeadHatCaptain # Lesotho - not used anymore
   name: captain's hardhat
   description: Feels good being the king.
   components:
@@ -1136,17 +1136,6 @@
     sprite: Clothing/Head/Hats/syndiecap_maa.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/syndiecap_maa.rsi
-
-- type: entity
-  parent: ClothingHeadBase
-  id: ClothingHeadHatTacticalMaidHeadband
-  name: tactical maid headband
-  description: A red headband - don't imagine yourself a Rambo and don't pick up a few machine guns.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Hats/tacticalmaidheadband.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hats/tacticalmaidheadband.rsi
 
 - type: entity
   parent: ClothingHeadBase

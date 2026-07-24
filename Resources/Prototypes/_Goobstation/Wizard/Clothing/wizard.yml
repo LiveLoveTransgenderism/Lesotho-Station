@@ -400,17 +400,6 @@
   id: ClothingOuterSuitWitchRobesReal
   name: witch robes
 
-# Shrine maiden
-- type: entity
-  parent: [ClothingHeadHatWizardBaseArmor, ClothingHeadHatShrineMaidenWig, ClothingHeadHatWizardBase]
-  id: ClothingHeadHatShrineMaidenWigReal
-  name: shrine maiden's wig
-
-- type: entity
-  parent: [ClothingOuterWizardBaseArmor, ClothingOuterSuitShrineMaiden, ClothingOuterWizardBase]
-  id: ClothingOuterSuitShrineMaidenReal
-  name: shrine maiden outfit
-
 # Centcomm
 - type: entity
   parent: [ClothingHeadHatWizardBaseArmor, ClothingHeadHatWizardBase]

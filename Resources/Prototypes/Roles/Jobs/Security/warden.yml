@@ -60,7 +60,7 @@
     head: ClothingHeadHatWarden
     mask: ClothingMaskGasSecurity
     outerClothing: ClothingOuterCoatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
+    jumpsuit: ClothingUniformJumpsuitMilitarySecurityWarden #Lesotho
     neck: Dinkystar
     belt: ClothingBeltSecurity
     gloves: ClothingHandsGlovesCombat

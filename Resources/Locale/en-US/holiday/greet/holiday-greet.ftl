@@ -55,7 +55,6 @@ holiday-name-friendship-day = Friendship Day
 holiday-name-beer-day = Beer Day
 holiday-name-talk-like-a-pirate-day = Talk-Like-a-Pirate Day
 holiday-name-programmers-day = Programmers' Day
-holiday-name-bisexual-pride-day = Bisexual Pride Day
 holiday-name-stupid-questions-day = Stupid-Questions Day
 holiday-name-animals-day = Animal's Day
 holiday-name-smiling-day = Smiling Day
@@ -68,7 +67,6 @@ holiday-name-armistice-day = Armistice Day
 holiday-name-kindness-day = Kindness Day
 holiday-name-life-day = Life Day
 holiday-name-flowers-day = Flower's Day
-holiday-name-transgender-remembrance-day = Transgender Day of Remembrance
 holiday-name-saying-hello-day = Saying Hello Day
 holiday-name-thanksgiving = Thanksgiving in the United States
 holiday-name-sinterklaas = Sinterklaas
@@ -79,8 +77,6 @@ holiday-name-christmas = Christmas
 holiday-name-festive-season = Festive Season
 holiday-name-boxing-day = Boxing Day
 holiday-name-friday-thirteenth = Friday the 13th
-holiday-name-national-coming-out-day = National Coming Out Day
-holiday-name-pride-month = Pride Month
 
 ## Custom congrats
 

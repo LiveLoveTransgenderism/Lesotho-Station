@@ -636,10 +636,10 @@ public sealed partial class AdminVerbSystem
             {
                 Text = maidenName,
                 Category = VerbCategory.Smite,
-                Icon = new SpriteSpecifier.Rsi(new ("/Textures/Clothing/Uniforms/Jumpskirt/janimaid.rsi"), "icon"),
+                Icon = new SpriteSpecifier.Rsi(new ("/Textures/Clothing/Shoes/Misc/duck-slippers.rsi"), "icon"),
                 Act = () =>
                 {
-                    _outfit.SetOutfit(args.Target, "JanitorMaidGear", (_, clothing) =>
+                    _outfit.SetOutfit(args.Target, "Null", (_, clothing) =>
                     {
                         if (HasComp<ClothingComponent>(clothing))
                             EnsureComp<UnremoveableComponent>(clothing);

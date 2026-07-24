@@ -39,6 +39,6 @@
     outerClothing: ClothingOuterCoatRobo
     gloves: ClothingHandsGlovesRobohands
     ear: ClothingHeadsetRobotics
-    jumpsuit: ClothingUniformJumpsuitRoboticist
+    jumpsuit: ClothingUniformJumpsuitMilitaryScientist #Lesotho
     shoes: ClothingShoesColorBlack
     id: RoboticistPDA

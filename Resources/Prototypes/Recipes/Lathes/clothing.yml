@@ -80,23 +80,8 @@
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtColorGrey
-  result: ClothingUniformJumpskirtColorGrey
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitLoungewear
   result: ClothingUniformJumpsuitLoungewear
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitBartender
-  result: ClothingUniformJumpsuitBartender
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtBartender
-  result: ClothingUniformJumpskirtBartender
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
@@ -104,34 +89,14 @@
   result: ClothingUniformJumpsuitCaptain
 
 - type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitCapFormal
-  result: ClothingUniformJumpsuitCapFormal
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtCapFormalDress
-  result: ClothingUniformJumpskirtCapFormalDress
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtCaptain
-  result: ClothingUniformJumpskirtCaptain
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitMilitaryCargo #Lesotho
+  result: ClothingUniformJumpsuitMilitaryCargo #Lesotho
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitCargo
-  result: ClothingUniformJumpsuitCargo
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtCargo
-  result: ClothingUniformJumpskirtCargo
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitSalvageSpecialist
-  result: ClothingUniformJumpsuitSalvageSpecialist
+  id: ClothingUniformJumpsuitMilitarySalvageSpecialist #Lesotho
+  result: ClothingUniformJumpsuitMilitarySalvageSpecialist #Lesotho
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
@@ -142,11 +107,6 @@
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCentcomFormal
   result: ClothingUniformJumpsuitCentcomFormal
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtCentcomFormalDress
-  result: ClothingUniformJumpskirtCentcomFormalDress
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
@@ -167,54 +127,21 @@
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtChiefEngineer
-  result: ClothingUniformJumpskirtChiefEngineer
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitChiefEngineerTurtle
   result: ClothingUniformJumpsuitChiefEngineerTurtle
 
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtChiefEngineerTurtle
-  result: ClothingUniformJumpskirtChiefEngineerTurtle
-
-## Chaplain
-
+## ClothingUniformJumpsuitMilitaryService
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitChaplain
-  result: ClothingUniformJumpsuitChaplain
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtChaplain
-  result: ClothingUniformJumpskirtChaplain
-
-## Chef
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitChef
-  result: ClothingUniformJumpsuitChef
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtChef
-  result: ClothingUniformJumpskirtChef
+  id: ClothingUniformJumpsuitMilitaryService #Lesotho
+  result: ClothingUniformJumpsuitMilitaryService #Lesotho
 
 ## Chemist
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitChemistry
-  result: ClothingUniformJumpsuitChemistry
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtChemistry
-  result: ClothingUniformJumpskirtChemistry
+  id: ClothingUniformJumpsuitMilitaryChemistry #Lesotho
+  result: ClothingUniformJumpsuitMilitaryChemistry #Lesotho
 
 ## Clown
 
@@ -223,32 +150,12 @@
   id: ClothingUniformJumpsuitClown
   result: ClothingUniformJumpsuitClown
 
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtClown
-  result: ClothingUniformJumpskirtClown
-
 ## CMO
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitCMO
-  result: ClothingUniformJumpsuitCMO
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtCMO
-  result: ClothingUniformJumpskirtCMO
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitCMOTurtle
-  result: ClothingUniformJumpsuitCMOTurtle
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtCMOTurtle
-  result: ClothingUniformJumpskirtCMOTurtle
+  id: ClothingUniformJumpsuitMilitaryCMO #Lesotho
+  result: ClothingUniformJumpsuitMilitaryCMO #Lesotho
 
 ## Command (Generic)
 
@@ -256,23 +163,6 @@
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCommandGeneric
   result: ClothingUniformJumpsuitCommandGeneric
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtCommandGeneric
-  result: ClothingUniformJumpskirtCommandGeneric
-
-## Detective
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitDetective
-  result: ClothingUniformJumpsuitDetective
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtDetective
-  result: ClothingUniformJumpskirtDetective
 
 ## Engineer
 
@@ -283,18 +173,8 @@
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtEngineering
-  result: ClothingUniformJumpskirtEngineering
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitSeniorEngineer
   result: ClothingUniformJumpsuitSeniorEngineer
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtSeniorEngineer
-  result: ClothingUniformJumpskirtSeniorEngineer
 
 ## HoP
 
@@ -303,62 +183,12 @@
   id: ClothingUniformJumpsuitHoP
   result: ClothingUniformJumpsuitHoP
 
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtHoP
-  result: ClothingUniformJumpskirtHoP
-
 ## HoS
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitHoS
-  result: ClothingUniformJumpsuitHoS
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtHoS
-  result: ClothingUniformJumpskirtHoS
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitHosFormal
-  result: ClothingUniformJumpsuitHosFormal
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtHosFormal
-  result: ClothingUniformJumpskirtHosFormal
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitHoSParadeMale
-  result: ClothingUniformJumpsuitHoSParadeMale
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtHoSParadeMale
-  result: ClothingUniformJumpskirtHoSParadeMale
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitHoSAlt
-  result: ClothingUniformJumpsuitHoSAlt
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitHoSBlue
-  result: ClothingUniformJumpsuitHoSBlue
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitHoSGrey
-  result: ClothingUniformJumpsuitHoSGrey
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtHoSAlt
-  result: ClothingUniformJumpskirtHoSAlt
+  id: ClothingUniformJumpsuitMilitarySecurityHOS #Lesotho
+  result: ClothingUniformJumpsuitMilitarySecurityHOS #Lesotho
 
 ## Hydroponics
 
@@ -367,22 +197,12 @@
   id: ClothingUniformJumpsuitHydroponics
   result: ClothingUniformJumpsuitHydroponics
 
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtHydroponics
-  result: ClothingUniformJumpskirtHydroponics
-
 ## Janitor
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitJanitor
   result: ClothingUniformJumpsuitJanitor
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtJanitor
-  result: ClothingUniformJumpskirtJanitor
 
 ## Lawyer
 
@@ -391,44 +211,19 @@
   id: ClothingUniformJumpsuitLawyerBlack
   result: ClothingUniformJumpsuitLawyerBlack
 
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtLawyerBlack
-  result: ClothingUniformJumpskirtLawyerBlack
-
 ## Librarian
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitLibrarian
-  result: ClothingUniformJumpsuitLibrarian
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtColorLightBrown #Librarian
-  result: ClothingUniformJumpskirtColorLightBrown #Librarian
+  id: ClothingUniformJumpsuitMilitaryService #Lesotho
+  result: ClothingUniformJumpsuitMilitaryService #Lesotho
 
 ## Medical Doctor
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitMedicalDoctor
-  result: ClothingUniformJumpsuitMedicalDoctor
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtMedicalDoctor
-  result: ClothingUniformJumpskirtMedicalDoctor
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitSeniorPhysician
-  result: ClothingUniformJumpsuitSeniorPhysician
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtSeniorPhysician
-  result: ClothingUniformJumpskirtSeniorPhysician
+  id: ClothingUniformJumpsuitMilitaryMedicalDoctor #Lesotho
+  result: ClothingUniformJumpsuitMilitaryMedicalDoctor #Lesotho
 
 ## Mime
 
@@ -436,11 +231,6 @@
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitMime
   result: ClothingUniformJumpsuitMime
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtMime
-  result: ClothingUniformJumpskirtMime
 
 ## Musician
 
@@ -456,47 +246,12 @@
   id: ClothingUniformJumpsuitOperative
   result: ClothingUniformJumpsuitOperative
 
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtOperative
-  result: ClothingUniformJumpskirtOperative
-
-
-## Paramedic
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitParamedic
-  result: ClothingUniformJumpsuitParamedic
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtParamedic
-  result: ClothingUniformJumpskirtParamedic
-
-## Senior Officer
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitSeniorOfficer
-  result: ClothingUniformJumpsuitSeniorOfficer
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtSeniorOfficer
-  result: ClothingUniformJumpskirtSeniorOfficer
-
 ## Prisoner
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitPrisoner
   result: ClothingUniformJumpsuitPrisoner
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtPrisoner
-  result: ClothingUniformJumpskirtPrisoner
 
 ## QM
 
@@ -512,18 +267,8 @@
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtQM
-  result: ClothingUniformJumpskirtQM
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitQMTurtleneck
   result: ClothingUniformJumpsuitQMTurtleneck
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtQMTurtleneck
-  result: ClothingUniformJumpskirtQMTurtleneck
 
 ## RD
 
@@ -532,44 +277,19 @@
   id: ClothingUniformJumpsuitResearchDirector
   result: ClothingUniformJumpsuitResearchDirector
 
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtResearchDirector
-  result: ClothingUniformJumpskirtResearchDirector
-
 ## Scientist
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitScientist
-  result: ClothingUniformJumpsuitScientist
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtScientist
-  result: ClothingUniformJumpskirtScientist
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitSeniorResearcher
-  result: ClothingUniformJumpsuitSeniorResearcher
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtSeniorResearcher
-  result: ClothingUniformJumpskirtSeniorResearcher
+  id: ClothingUniformJumpsuitMilitaryScientist #Lesotho
+  result: ClothingUniformJumpsuitMilitaryScientist #Lesotho
 
 ## Security Officer
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitSec
-  result: ClothingUniformJumpsuitSec
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtSec
-  result: ClothingUniformJumpskirtSec
+  id: ClothingUniformJumpsuitMilitarySecurity #Lesotho
+  result: ClothingUniformJumpsuitMilitarySecurity #Lesotho
 
 ## Brigmedic
 
@@ -580,18 +300,8 @@
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtBrigmedic
-  result: ClothingUniformJumpskirtBrigmedic
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitSyndieFormal
   result: ClothingUniformJumpsuitSyndieFormal
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtSyndieFormalDress
-  result: ClothingUniformJumpskirtSyndieFormalDress
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
@@ -610,19 +320,14 @@
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpsuitWarden
-  result: ClothingUniformJumpsuitWarden
-
-- type: latheRecipe
-  parent: BaseJumpsuitRecipe
-  id: ClothingUniformJumpskirtWarden
-  result: ClothingUniformJumpskirtWarden
+  id: ClothingUniformJumpsuitMilitarySecurityWarden #Lesotho
+  result: ClothingUniformJumpsuitMilitarySecurityWarden #Lesotho
 
 # Command winter coats
-- type: latheRecipe
-  parent: BaseCommandCoatRecipe
-  id: ClothingOuterWinterCap
-  result: ClothingOuterWinterCap
+#- type: latheRecipe #Lesotho
+#  parent: BaseCommandCoatRecipe
+#  id: ClothingOuterWinterCap
+#  result: ClothingOuterWinterCap
 
 - type: latheRecipe
   parent: BaseCommandCoatRecipe
@@ -776,10 +481,10 @@
   result: ClothingOuterWinterSyndieCap
 
 # Hats
-- type: latheRecipe
-  parent: BaseCommandHatRecipe
-  id: ClothingHeadHatCaptain
-  result: ClothingHeadHatCaptain
+#- type: latheRecipe #Lesotho
+  #parent: BaseCommandHatRecipe
+  #id: ClothingHeadHatCaptain
+  #result: ClothingHeadHatCaptain
 
 - type: latheRecipe
   parent: BaseCommandHatRecipe

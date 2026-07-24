@@ -682,15 +682,15 @@
     - Carpets
     - Bedsheets
     # Goobstation Packs
-    - ClothingCasualJumpsuits
-    - ClothingCommandSummer
+    #- ClothingCasualJumpsuits #Lesotho
+    #- ClothingCommandSummer #Lesotho
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
     - ClothingSyndie
     # Goobstation Packs
     - ClothingDurathreadArmoured
-    - ClothingCasualContrabandJumpsuits
+    #- ClothingCasualContrabandJumpsuits #Lesotho
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
 

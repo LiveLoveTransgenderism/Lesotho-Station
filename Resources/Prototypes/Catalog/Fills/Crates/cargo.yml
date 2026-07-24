@@ -152,7 +152,6 @@
     - id: ClothingHeadHatCatEars
     - id: ClothingHeadHatDogEars
     - id: ClothingOuterArmorReflective
-    - id: ClothingUniformJumpskirtSyndieFormalDress
     - id: ClothingNeckCloakNanotrasen
     - id: ClothingUniformJumpsuitNanotrasen
     - id: ClothingShoesSnakeskinBoots
@@ -161,8 +160,6 @@
     - id: ClothingHeadSafari
     - id: ClothingMaskGasMerc
     - id: ClothingHeadHatCardborg
-    - id: ClothingUnderSocksCoder
-    - id: ClothingUniformJumpskirtOfLife
     - id: ClothingShoesWizardSkates # Goob
       weight: 0.1
 

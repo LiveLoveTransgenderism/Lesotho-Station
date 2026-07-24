@@ -127,8 +127,6 @@
         - id: BarberScissors
         - id: ClothingOuterSuitMonkey
         - id: ClothingHeadHatAnimalMonkey
-        - id: ClothingUniformJumpskirtJanimaid
-        - id: ClothingUniformJumpskirtOldDress
         - id: ClothingHeadHatMagician
         - !type:AllSelector # Cloaks
           children:
@@ -152,7 +150,6 @@
           - id: ClothingBeltSuspendersBlack
         - !type:AllSelector # Performer starter kit
           children:
-          - id: ClothingUniformJumpskirtPerformer
           - id: ClothingShoesBootsPerformer
           - id: ClothingHeadPerformerWig
 

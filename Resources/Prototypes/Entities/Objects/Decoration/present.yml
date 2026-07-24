@@ -200,8 +200,6 @@
         orGroup: GiftPool
       - id: ViolaInstrument
         orGroup: GiftPool
-      - id: ClothingNeckCloakTrans
-        orGroup: GiftPool
       - id: ClothingNeckCloakAdmin
         orGroup: GiftPool
       - id: ToyFigurineSkeleton
@@ -227,10 +225,6 @@
       - id: ClothingHeadHelmetCosmonaut
         orGroup: GiftPool
       - id: ClothingShoeSlippersDuck
-        orGroup: GiftPool
-      - id: ClothingUnderSocksBee
-        orGroup: GiftPool
-      - id: ClothingUnderSocksCoder
         orGroup: GiftPool
       - id: ClothingBeltUtilityFilled
         orGroup: GiftPool
@@ -322,21 +316,9 @@
         orGroup: GiftPool
       - id: ClothingUniformJumpsuitAncient
         orGroup: GiftPool
-      - id: ClothingUniformJumpsuitDetectiveGrey
-        orGroup: GiftPool
       - id: ClothingUniformJumpsuitColorMaroon
         orGroup: GiftPool
-      - id: ClothingUniformColorRainbow
-        orGroup: GiftPool
-      - id: ClothingUniformJumpskirtColorRainbow
-        orGroup: GiftPool
       - id: ClothingUniformOveralls
-        orGroup: GiftPool
-      - id: ClothingUniformJumpskirtDetectiveGrey
-        orGroup: GiftPool
-      - id: ClothingUniformJumpskirtColorMaroon
-        orGroup: GiftPool
-      - id: ClothingUniformJumpskirtJanimaid
         orGroup: GiftPool
       - id: PersonalAI
         orGroup: GiftPool
@@ -361,8 +343,6 @@
       - id: MiningDrill
         orGroup: GiftPool
       - id: CowToolboxFilled
-        orGroup: GiftPool
-      - id: ClothingUniformJumpsuitEngineeringHazard
         orGroup: GiftPool
       - id: Bola
         orGroup: GiftPool

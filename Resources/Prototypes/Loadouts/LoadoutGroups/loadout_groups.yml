@@ -6,7 +6,6 @@
   maxLimit: 3
   loadouts:
   - FlowerWreath
-  - Hairflower
   - Headphones
   - PlushieLizard
   - PlushieSpaceLizard
@@ -24,24 +23,6 @@
   - BoxFolderBaseThreePapers
   - BoxFolderPlasticClipboardThreePapers
   - BoxFolderClipboardThreePapers
-  - ClothingNeckLGBTPin
-  - ClothingNeckAllyPin
-  - ClothingNeckAromanticPin
-  - ClothingNeckAsexualPin
-  - ClothingNeckAroacePin
-  - ClothingNeckBisexualPin
-  - ClothingNeckGayPin
-  - ClothingNeckIntersexPin
-  - ClothingNeckLesbianPin
-  - ClothingNeckNonBinaryPin
-  - ClothingNeckPansexualPin
-  - ClothingNeckPluralPin
-  - ClothingNeckOmnisexualPin
-  - ClothingNeckGenderqueerPin
-  - ClothingNeckGenderfluidPin
-  - ClothingNeckTransPin
-  - ClothingNeckAutismPin
-  - ClothingNeckGoldAutismPin
   # <Goob>
   - FoodSnackLollypopWrapped
   - FoodSnackLollypopWrappedRainbow
@@ -147,7 +128,7 @@
   name: loadout-group-captain-head
   minLimit: 0
   loadouts:
-  - CaptainHead
+  #- CaptainHead #Lesotho
   - CaptainCap
 
 - type: loadoutGroup
@@ -155,11 +136,8 @@
   name: loadout-group-captain-jumpsuit
   loadouts:
   - CaptainJumpsuit
-  - CaptainJumpskirt
-  - CaptainFormalSuit
-  - CaptainFormalSkirt
-  - CaptainJumpsuitMilitary # goob
-  - CaptainSummerShirt # also goob
+#  - CaptainFormalSuit #Lesotho
+  - CaptainJumpsuitMilitary #Lesotho
 
 - type: loadoutGroup
   id: CaptainNeck
@@ -167,7 +145,7 @@
   minLimit: 0
   loadouts:
   - CaptainCloak
-  - CaptainCloakFormal
+#  - CaptainCloakFormal #Lesotho
   - CaptainMantle
   - VeteranCaptainCloak # goob
 
@@ -178,21 +156,25 @@
   - CaptainBackpack
   - CaptainSatchel
   - CaptainDuffel
-  - CaptainMessenger # Frontier
 
 - type: loadoutGroup
   id: CaptainOuterClothing
   name: loadout-group-captain-outerclothing
   loadouts:
   - CaptainOuterClothing
-  # - CaptainWintercoat
-  - CaptainJacket # Goobstation
+  - CaptainArmoredWinterCoat # Lesotho
 
-#- type: loadoutGroup
-#  id: CaptainJobTrinkets
-#  name: loadout-group-jobtrinkets
-#  minLimit: 0
-#  loadouts: []
+- type: loadoutGroup
+  id: CaptainFirearm #Lesotho
+  name: loadout-group-captain-captainfirearm
+  loadouts:
+  - CaptainLaserGun
+
+- type: loadoutGroup
+  id: CaptainSword #Lesotho
+  name: loadout-group-captain-captainsword
+  loadouts:
+  - CaptainSword
 
 - type: loadoutGroup
   id: HoPHead
@@ -205,10 +187,7 @@
   id: HoPJumpsuit
   name: loadout-group-hop-jumpsuit
   loadouts:
-  - HoPJumpsuit
-  - HoPJumpskirt
-  - HoPJumpsuitMilitary # goob
-  - HoPSummerShirt # goob
+  - HoPJumpsuitMilitary # goob #Lesotho
 
 - type: loadoutGroup
   id: HoPNeck
@@ -225,8 +204,6 @@
   - CommonBackpack
   - CommonSatchel
   - CommonDuffel
-  - CommonMessenger # Frontier
-  - HoPBackpackIan
 
 - type: loadoutGroup
   id: HoPOuterClothing
@@ -247,12 +224,7 @@
   id: PassengerJumpsuit
   name: loadout-group-passenger-jumpsuit
   loadouts:
-  - GreyJumpsuit
-  - GreyJumpskirt
-  - AncientJumpsuit
-  - RainbowJumpsuit
-  - RainbowJumpskirt
- # goob changes start
+ # goob changes start #Lesotho
   - GreyMJ
   - BlackMJ
   - BlueMJ
@@ -268,7 +240,6 @@
   - LightBrownMJ
   - BrownMJ
   - MaroonMJ
-  - QuarterzipJumpsuit
  # goob changes end
 
 - type: loadoutGroup
@@ -292,7 +263,6 @@
   - CommonBackpack
   - CommonSatchel
   - CommonDuffel
-  - CommonMessenger # Frontier
 
 - type: loadoutGroup
   id: PassengerNeck
@@ -334,10 +304,7 @@
   id: BartenderJumpsuit
   name: loadout-group-bartender-jumpsuit
   loadouts:
-  - BartenderJumpsuit
-  - BartenderJumpskirt
-  - BartenderJumpsuitPurple
-  - ServiceMJ # goob
+  - ServiceMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: BartenderOuterClothing
@@ -379,12 +346,8 @@
   id: ChefJumpsuit
   name: loadout-group-chef-jumpsuit
   loadouts:
-  - ChefJumpsuit
-  - ChefJumpskirt
   # <Trauma>
-  - ServiceMJ
-  - ClothingUniformJumpsuitDisgusting
-  - ClothingUniformJumpsuitWaiter
+  - ServiceMJ #Lesotho
   # </Trauma>
 
 - type: loadoutGroup
@@ -406,11 +369,7 @@
   id: LibrarianJumpsuit
   name: loadout-group-librarian-jumpsuit
   loadouts:
-  - LibrarianJumpsuit
-  - LibrarianJumpskirt
-  - CuratorJumpsuit
-  - CuratorJumpskirt
-  - ServiceMJ # goob
+  - ServiceMJ # goob #Lesotho
 
 #- type: loadoutGroup
 #  id: LibrarianJobTrinkets
@@ -422,17 +381,7 @@
   id: LawyerJumpsuit
   name: loadout-group-lawyer-jumpsuit
   loadouts:
-  - LawyerJumpsuit
-  - LawyerJumpskirt
-  - LawyerJumpsuitBlue
-  - LawyerJumpskirtBlue
-  - LawyerJumpsuitPurple
-  - LawyerJumpskirtPurple
-  - LawyerJumpsuitRed
-  - LawyerJumpskirtRed
-  - LawyerJumpsuitGood
-  - LawyerJumpskirtGood
-  - ServiceMJ # goob
+  - ServiceMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: LawyerNeck
@@ -468,9 +417,7 @@
 - type: loadoutGroup
   id: ChaplainJumpsuit
   name: loadout-group-chaplain-jumpsuit
-  loadouts:
-  - ChaplainJumpsuit
-  - ChaplainJumpskirt
+  loadouts: #Lesotho
   - ChaplainRobesLight
   - ChaplainRobesDark
   - ServiceMJ # goob
@@ -510,9 +457,7 @@
   id: JanitorJumpsuit
   name: loadout-group-janitor-jumpsuit
   loadouts:
-  - JanitorJumpsuit
-  - JanitorJumpskirt
-  - ServiceMJ # goob
+  - ServiceMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: JanitorGloves
@@ -550,11 +495,7 @@
   id: BotanistJumpsuit
   name: loadout-group-botanist-jumpsuit
   loadouts:
-  - BotanistJumpsuit
-  - BotanistJumpskirt
-  - BotanistOveralls
-  - ServiceMJ # goob
-  - HydroMJ # goob
+  - HydroMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: BotanistBackpack
@@ -563,7 +504,6 @@
   - BotanistBackpack
   - BotanistSatchel
   - BotanistDuffel
-  - BotanistMessenger # Frontier
 
 - type: loadoutGroup
   id: BotanistOuterClothing
@@ -593,7 +533,6 @@
   name: loadout-group-clown-jumpsuit
   loadouts:
   - ClownSuit
-  - ClownSkirt
   - JesterSuit
   - JesterAltSuit
 
@@ -604,7 +543,6 @@
   - ClownBackpack
   - ClownSatchel
   - ClownDuffel
-  - ClownMessenger # Frontier
 
 - type: loadoutGroup
   id: ClownOuterClothing
@@ -666,7 +604,6 @@
   name: loadout-group-mime-jumpsuit
   loadouts:
   - MimeJumpsuit
-  - MimeJumpskirt
 
 - type: loadoutGroup
   id: MimeBackpack
@@ -675,7 +612,6 @@
   - MimeBackpack
   - MimeSatchel
   - MimeDuffel
-  - MimeMessenger # Frontier
 
 - type: loadoutGroup
   id: MimeOuterClothing
@@ -718,9 +654,7 @@
   id: MusicianJumpsuit
   name: loadout-group-musician-jumpsuit
   loadouts:
-  - MusicianJumpsuit
-  - MusicianJumpskirt
-  - ServiceMJ # goob
+  - ServiceMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: MusicianOuterClothing
@@ -783,13 +717,7 @@
   id: QuartermasterJumpsuit
   name: loadout-group-quartermaster-jumpsuit
   loadouts:
-  - QuartermasterJumpsuit
-  - QuartermasterJumpskirt
-  - QuartermasterTurtleneck
-  - QuartermasterTurtleneckSkirt
-  - QuartermasterFormalSuit
-  - QuartermasterMJ # goob
-  - QMSummerShirt # goob
+  - QuartermasterMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: QuartermasterNeck
@@ -831,11 +759,7 @@
   id: CargoTechnicianJumpsuit
   name: loadout-group-cargo-technician-jumpsuit
   loadouts:
-  - CargoTechnicianJumpsuit
-  - CargoTechnicianJumpskirt
-  - CargoTechnicianJumpsuitMail # Goob/DeltaV - Mail
-  - CargoTechnicianJumpskirtMail # Goob/DeltaV - Mail
-  - CargoTechMJ # goob
+  - CargoTechMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: CargoTechnicianBackpack
@@ -844,7 +768,6 @@
   - CargoTechnicianBackpack
   - CargoTechnicianSatchel
   - CargoTechnicianDuffel
-  - CargoTechnicianMessenger # Frontier
 
 - type: loadoutGroup
   id: CargoTechnicianOuterClothing
@@ -881,7 +804,6 @@
   - SalvageSpecialistBackpack
   - SalvageSpecialistSatchel
   - SalvageSpecialistDuffel
-  - SalvageSpecialistMessenger # Frontier
 
 - type: loadoutGroup
   id: SalvageSpecialistOuterClothing
@@ -916,12 +838,7 @@
   id: ChiefEngineerJumpsuit
   name: loadout-group-chief-engineer-jumpsuit
   loadouts:
-  - ChiefEngineerJumpsuit
-  - ChiefEngineerJumpskirt
-  - ChiefEngineerTurtleneck
-  - ChiefEngineerTurtleneckSkirt
-  - ChiefEngineerMJ # goob
-  - CESummerShirt # goob
+  - ChiefEngineerMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: ChiefEngineerNeck
@@ -955,9 +872,7 @@
   id: TechnicalAssistantJumpsuit
   name: loadout-group-technical-assistant-jumpsuit
   loadouts:
-  - YellowJumpsuit
-  - YellowJumpskirt
-  - EngiMJ # goob
+  - EngiMJ # goob #Lesotho
 
 #- type: loadoutGroup
 #  id: TechnicalAssistantJobTrinkets
@@ -979,12 +894,7 @@
   id: StationEngineerJumpsuit
   name: loadout-group-station-engineer-jumpsuit
   loadouts:
-  - StationEngineerJumpsuit
-  - StationEngineerJumpskirt
-  - StationEngineerHazardsuit
-  - SeniorEngineerJumpsuit
-  - SeniorEngineerJumpskirt
-  - EngiMJ # goob
+  - EngiMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: StationEngineerBackpack
@@ -993,7 +903,6 @@
   - StationEngineerBackpack
   - StationEngineerSatchel
   - StationEngineerDuffel
-  - StationEngineerMessenger # Frontier
 
 - type: loadoutGroup
   id: StationEngineerOuterClothing
@@ -1027,12 +936,7 @@
   id: AtmosphericTechnicianJumpsuit
   name: loadout-group-atmospheric-technician-jumpsuit
   loadouts:
-  - AtmosphericTechnicianJumpsuit
-  - AtmosphericTechnicianJumpskirt
-  - AtmosphericTechnicianJumpsuitCasual
-  - SeniorEngineerJumpskirt  # Goobstation
-  - SeniorEngineerJumpsuit   # Goobstation
-  - AtmosMJ # goob
+  - AtmosMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: AtmosphericTechnicianOuterClothing
@@ -1048,7 +952,6 @@
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianSatchel
   - AtmosphericTechnicianDuffel
-  - AtmosphericTechnicianMessenger # Frontier
 
 - type: loadoutGroup
   id: AtmosphericTechnicianShoes
@@ -1099,10 +1002,7 @@
   id: ResearchDirectorJumpsuit
   name: loadout-group-research-director-jumpsuit
   loadouts:
-  - ResearchDirectorJumpsuit
-  - ResearchDirectorJumpskirt
-  - ResearchDirectorMJ # goob
-  - RDSummerShirt # goob
+  - ResearchDirectorMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: ResearchDirectorOuterClothing
@@ -1146,13 +1046,7 @@
   id: ScientistJumpsuit
   name: loadout-group-scientist-jumpsuit
   loadouts:
-  - ScientistJumpsuit
-  - ScientistJumpskirt
-  #- RoboticistJumpsuit
-  #- RoboticistJumpskirt
-  - SeniorResearcherJumpsuit
-  - SeniorResearcherJumpskirt
-  - ResearchMJ # goob
+  - ResearchMJ # goob #Lesotho
 
 - type: loadoutGroup
   id: ScientistBackpack
@@ -1161,7 +1055,6 @@
   - ScientistBackpack
   - ScientistSatchel
   - ScientistDuffel
-  - ScientistMessenger # Frontier
 
 - type: loadoutGroup
   id: ScientistOuterClothing
@@ -1209,9 +1102,7 @@
   id: ResearchAssistantJumpsuit
   name: loadout-group-research-assistant-jumpsuit
   loadouts:
-  - WhiteJumpsuit
-  - WhiteJumpskirt
-  - ResearchMJ # goob
+  - ResearchMJ # goob #Lesotho
 
 #- type: loadoutGroup
 #  id: ResearchAssistantJobTrinkets
@@ -1233,13 +1124,7 @@
   id: HeadofSecurityJumpsuit
   name: loadout-group-head-of-security-jumpsuit
   loadouts:
-  - HeadofSecurityJumpsuit
-  - HeadofSecurityJumpskirt
-  - HeadofSecurityTurtleneck
-  - HeadofSecurityTurtleneckSkirt
-  - HeadofSecurityFormalSuit
-  - HeadofSecurityFormalSkirt
-  - HoSSummerShirt # goob
+  - HeadofSecurityJumpsuit #Lesotho
 
 - type: loadoutGroup
   id: HeadofSecurityNeck
@@ -1279,7 +1164,6 @@
   name: loadout-group-warden-jumpsuit
   loadouts:
   - WardenJumpsuit
-  - WardenJumpskirt
 
 - type: loadoutGroup
   id: WardenOuterClothing
@@ -1300,8 +1184,7 @@
   id: SecurityHead
   name: loadout-group-security-head
   minLimit: 0
-  loadouts:
-  - SecurityHelmet
+  loadouts: #Lesotho
   - SecurityHelmetAlt # Goobstation
   - SecurityBeret
   - SecurityHat
@@ -1312,15 +1195,7 @@
   id: SecurityJumpsuit
   name: loadout-group-security-jumpsuit
   loadouts:
-  - SecurityJumpsuit
-  - SecurityJumpskirt
-  - SecurityJumpsuitGrey
-  - SecurityJumpskirtGrey
-  - SeniorOfficerJumpsuit
-  - SeniorOfficerJumpskirt
-  - TrooperUniform
-  - SergeantUniform # Trauma
-  - SergeantSkirt # Trauma
+  - SecurityJumpsuit #Lesotho
 
 - type: loadoutGroup
   id: SecurityBackpack
@@ -1329,7 +1204,6 @@
   - SecurityBackpack
   - SecuritySatchel
   - SecurityDuffel
-  - SecurityMessenger # Frontier
 
 - type: loadoutGroup
   id: SecurityBelt
@@ -1344,7 +1218,7 @@
   loadouts:
   - ArmorVest
   - ArmorVestSlim
-  - SecurityOfficerWintercoat
+  #- SecurityOfficerWintercoat #Lesotho
   - WinterCoatSeniorSecArmored # Goobstation
 
 - type: loadoutGroup
@@ -1353,7 +1227,7 @@
   loadouts:
   - JackBoots
   - CombatBoots # Goobstation
-  - SecurityWinterBoots
+  #- SecurityWinterBoots #Lesotho
 
 - type: loadoutGroup
   id: SecurityPDA
@@ -1390,9 +1264,6 @@
   name: loadout-group-detective-jumpsuit
   loadouts:
   - DetectiveJumpsuit
-  - DetectiveJumpskirt
-  - NoirJumpsuit
-  - NoirJumpskirt
 
 - type: loadoutGroup
   id: DetectiveOuterClothing
@@ -1401,7 +1272,7 @@
   - DetectiveArmorVest
   - DetectiveCoat
   - DetectiveCoatGrey
-  - SecurityOfficerWintercoat
+  #- SecurityOfficerWintercoat #Lesotho
 
 - type: loadoutGroup
   id: DetectiveJobTrinkets
@@ -1415,7 +1286,6 @@
   name: loadout-group-security-cadet-jumpsuit
   loadouts:
   - RedJumpsuit
-  - RedJumpskirt
 
 #- type: loadoutGroup
 #  id: SecurityCadetJobTrinkets
@@ -1443,7 +1313,6 @@
   loadouts:
   - ReporterJumpsuit
   - JournalistJumpsuit
-  - ReporterDress
 
 - type: loadoutGroup
   id: ReporterHead
@@ -1471,7 +1340,6 @@
   name: loadout-group-psychologist-jumpsuit
   loadouts:
   - PsychologistJumpsuit
-  - PsychologistJumpskirt
 
 #- type: loadoutGroup
 #  id: PsychologistJobTrinkets

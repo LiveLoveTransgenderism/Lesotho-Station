@@ -4,42 +4,31 @@
   id: ClothingCivilian
   recipes:
   - ClothingUniformJumpsuitColorGrey
-  - ClothingUniformJumpskirtColorGrey
   - ClothingUniformJumpsuitLoungewear
 
 - type: latheRecipePack
   id: ClothingCargo
   recipes:
-  - ClothingUniformJumpsuitCargo
-  - ClothingUniformJumpskirtCargo
-  - ClothingUniformJumpsuitSalvageSpecialist
+  - ClothingUniformJumpsuitMilitaryCargo #Lesotho
+  - ClothingUniformJumpsuitMilitarySalvageSpecialist #Lesotho
   - ClothingHeadHatQMsoft
   - ClothingHeadHatBeretQM
-  - ClothingUniformJumpsuitQM
-  - ClothingUniformJumpskirtQM
-  - ClothingUniformJumpsuitQMTurtleneck
-  - ClothingUniformJumpskirtQMTurtleneck
-  - ClothingUniformJumpsuitQMFormal
-  - ClothingUniformJumpsuitShaftMiner # Lavaland Change
+  - ClothingUniformJumpsuitMilitaryQM #Lesotho
 
 - type: latheRecipePack
   id: ClothingCommand
   recipes:
   # Captain
   - ClothingHeadHatCapcap
-  - ClothingHeadHatCaptain
+  #- ClothingHeadHatCaptain
   - ClothingUniformJumpsuitCaptain
-  - ClothingUniformJumpskirtCaptain
-  - ClothingUniformJumpsuitCapFormal
-  - ClothingUniformJumpskirtCapFormalDress
+  #- ClothingUniformJumpsuitCapFormal
   # HoP
   - ClothingHeadHatHopcap
   - ClothingUniformJumpsuitHoP
-  - ClothingUniformJumpskirtHoP
   # Generic
   - ClothingHeadHatBeretCommand
   - ClothingHeadHatCommandSoft
-  - ClothingUniformJumpskirtCommandGeneric
   - ClothingUniformJumpsuitCommandGeneric
 
 - type: latheRecipePack
@@ -47,31 +36,18 @@
   recipes:
   - ClothingHeadHatBeretEngineering
   - ClothingUniformJumpsuitChiefEngineer
-  - ClothingUniformJumpskirtChiefEngineer
   - ClothingUniformJumpsuitChiefEngineerTurtle
-  - ClothingUniformJumpskirtChiefEngineerTurtle
   - ClothingUniformJumpsuitEngineering
-  - ClothingUniformJumpskirtEngineering
   - ClothingUniformJumpsuitSeniorEngineer
-  - ClothingUniformJumpskirtSeniorEngineer
 
 - type: latheRecipePack
   id: ClothingMedical
   recipes:
   - ClothingUniformJumpsuitChemistry
-  - ClothingUniformJumpskirtChemistry
   - ClothingHeadHatBeretCmo
-  - ClothingUniformJumpsuitCMO
-  - ClothingUniformJumpskirtCMO
-  - ClothingUniformJumpsuitCMOTurtle
-  - ClothingUniformJumpskirtCMOTurtle
+  - ClothingUniformJumpsuitMilitaryCMO #Lesotho
   - ClothingHeadHatBeretSeniorPhysician
-  - ClothingUniformJumpsuitMedicalDoctor
-  - ClothingUniformJumpskirtMedicalDoctor
-  - ClothingUniformJumpsuitSeniorPhysician
-  - ClothingUniformJumpskirtSeniorPhysician
-  - ClothingUniformJumpsuitParamedic
-  - ClothingUniformJumpskirtParamedic
+  - ClothingUniformJumpsuitMilitaryMedicalDoctor #Lesotho
   - ClothingHeadHatParamedicsoft
 
 - type: latheRecipePack
@@ -79,73 +55,38 @@
   recipes:
   - ClothingHeadHatBeretRND
   - ClothingUniformJumpsuitResearchDirector
-  - ClothingUniformJumpskirtResearchDirector
-  - ClothingUniformJumpsuitScientist
-  - ClothingUniformJumpskirtScientist
-  - ClothingUniformJumpsuitSeniorResearcher
-  - ClothingUniformJumpskirtSeniorResearcher
+  - ClothingUniformJumpsuitMilitaryScientist #Lesotho
 
 - type: latheRecipePack
   id: ClothingSecurity
   recipes:
-  - ClothingUniformJumpsuitDetective
-  - ClothingUniformJumpskirtDetective
   - ClothingHeadHatBeretHoS
   - ClothingHeadHatHoshat
-  - ClothingUniformJumpsuitHoS
-  - ClothingUniformJumpskirtHoS
-  - ClothingUniformJumpsuitHosFormal
-  - ClothingUniformJumpskirtHosFormal
-  - ClothingUniformJumpsuitHoSAlt
-  - ClothingUniformJumpskirtHoSAlt
-  - ClothingUniformJumpsuitHoSBlue
-  - ClothingUniformJumpsuitHoSGrey
-  - ClothingUniformJumpsuitHoSParadeMale
-  - ClothingUniformJumpskirtHoSParadeMale
-  - ClothingUniformJumpsuitSeniorOfficer
-  - ClothingUniformJumpskirtSeniorOfficer
+  - ClothingUniformJumpsuitMilitarySecurityHOS #Lesotho
   - ClothingUniformJumpsuitPrisoner
-  - ClothingUniformJumpskirtPrisoner
   - ClothingHeadHatBeretSecurity
-  - ClothingUniformJumpsuitSec
-  - ClothingUniformJumpskirtSec
+  - ClothingUniformJumpsuitMilitarySecurity #Lesotho
   - ClothingHeadHatBeretBrigmedic
   - ClothingUniformJumpsuitBrigmedic
-  - ClothingUniformJumpskirtBrigmedic
   - ClothingHeadHatBeretWarden
   - ClothingHeadHatWarden
-  - ClothingUniformJumpsuitWarden
-  - ClothingUniformJumpskirtWarden
+  - ClothingUniformJumpsuitMilitarySecurityWarden #Lesotho
 
 - type: latheRecipePack
   id: ClothingService
   recipes:
-  - ClothingUniformJumpsuitBartender
-  - ClothingUniformJumpskirtBartender
-  - ClothingUniformJumpsuitChaplain
-  - ClothingUniformJumpskirtChaplain
-  - ClothingUniformJumpsuitChef
-  - ClothingUniformJumpskirtChef
+  - ClothingUniformJumpsuitMilitaryService #Lesotho
   - ClothingUniformJumpsuitClown
-  - ClothingUniformJumpskirtClown
   - ClothingUniformJumpsuitHydroponics
-  - ClothingUniformJumpskirtHydroponics
   - ClothingUniformJumpsuitJanitor
-  - ClothingUniformJumpskirtJanitor
   - ClothingUniformJumpsuitLawyerBlack
-  - ClothingUniformJumpskirtLawyerBlack
-  - ClothingUniformJumpsuitLibrarian
-  - ClothingUniformJumpskirtColorLightBrown
   - ClothingUniformJumpsuitMime
-  - ClothingUniformJumpskirtMime
-  - ClothingUniformJumpsuitMusician
   - ClothingUniformJumpsuitReporterGoob # goob change
-  - ClothingUniformJumpskirtReporterGoob # goob change
 
 - type: latheRecipePack
   id: WinterCoats
   recipes:
-  - ClothingOuterWinterCap
+  #- ClothingOuterWinterCap
   - ClothingOuterWinterCE
   - ClothingOuterWinterCMO
   - ClothingOuterWinterHoP
@@ -214,7 +155,6 @@
   - ClothingHeadHatCentcom
   - ClothingUniformJumpsuitCentcomAgent
   - ClothingUniformJumpsuitCentcomFormal
-  - ClothingUniformJumpskirtCentcomFormalDress
   - ClothingUniformJumpsuitCentcomOfficer
   - ClothingUniformJumpsuitCentcomOfficial
 
@@ -224,9 +164,7 @@
   - ClothingHeadHatSyndieMAA
   - ClothingHeadHatSyndie
   - ClothingUniformJumpsuitOperative
-  - ClothingUniformJumpskirtOperative
   - ClothingUniformJumpsuitSyndieFormal
-  - ClothingUniformJumpskirtSyndieFormalDress
   - ClothingHeadPyjamaSyndicateBlack
   - ClothingUniformJumpsuitPyjamaSyndicateBlack
   - ClothingHeadPyjamaSyndicatePink

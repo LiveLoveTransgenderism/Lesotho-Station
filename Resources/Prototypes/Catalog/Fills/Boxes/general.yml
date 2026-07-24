@@ -268,7 +268,6 @@
       storagebase: !type:AllSelector
         children:
         - id: ClothingShoesBootsPerformer
-        - id: ClothingUniformJumpskirtPerformer
         - id: ClothingHeadPerformerWig
         - id: FoodMealMemoryleek
           amount: 2

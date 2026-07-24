@@ -88,18 +88,18 @@
     clothingPrototypes:
       head: ClothingHeadHatHoodWinterBartender
 
-- type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
-  id: ClothingOuterWinterCap
-  name: captain's winter coat
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coatcap.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coatcap.rsi
-  - type: ToggleableClothing # Goobstation - Modsuits change
-    clothingPrototypes:
-      head: ClothingHeadHatHoodWinterCaptain
+#- type: entity #Lesotho
+#  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+#  id: ClothingOuterWinterCap
+#  name: captain's winter coat
+#  components:
+#  - type: Sprite
+#    sprite: Clothing/OuterClothing/WinterCoats/coatcap.rsi
+#  - type: Clothing
+#    sprite: Clothing/OuterClothing/WinterCoats/coatcap.rsi
+#  - type: ToggleableClothing # Goobstation - Modsuits change
+#    clothingPrototypes:
+#      head: ClothingHeadHatHoodWinterCaptain
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable

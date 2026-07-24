@@ -62486,20 +62486,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -41.75516,14.452198
-- proto: ClothingNeckAromanticPin
-  entities:
-  - uid: 9827
-    components:
-    - type: Transform
-      parent: 2
-      pos: 83.621025,-13.51627
-- proto: ClothingNeckBisexualPin
-  entities:
-  - uid: 9828
-    components:
-    - type: Transform
-      parent: 2
-      pos: -20.494595,5.7531924
 - proto: ClothingNeckBling
   entities:
   - uid: 9829
@@ -62520,34 +62506,6 @@ entities:
     - type: Physics
       linearDamping: 0
       angularDamping: 0
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 9831
-    components:
-    - type: Transform
-      parent: 2
-      pos: -40.498245,-36.02266
-- proto: ClothingNeckIntersexPin
-  entities:
-  - uid: 9832
-    components:
-    - type: Transform
-      parent: 2
-      pos: -12.770909,19.336336
-- proto: ClothingNeckLesbianPin
-  entities:
-  - uid: 9833
-    components:
-    - type: Transform
-      parent: 2
-      pos: -10.308835,13.564301
-- proto: ClothingNeckLGBTPin
-  entities:
-  - uid: 9834
-    components:
-    - type: Transform
-      parent: 2
-      pos: -11.221505,22.789167
 - proto: ClothingNeckMantleCMO
   entities:
   - uid: 9836
@@ -62584,13 +62542,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingNeckNonBinaryPin
-  entities:
-  - uid: 9841
-    components:
-    - type: Transform
-      parent: 2
-      pos: -6.8039737,15.288539
 - proto: ClothingNeckScarfStripedBlue
   entities:
   - uid: 9842
@@ -62641,13 +62592,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 19.387941,-50.49055
-- proto: ClothingNeckTransPin
-  entities:
-  - uid: 9850
-    components:
-    - type: Transform
-      parent: 2
-      pos: -8.970711,16.51249
 - proto: ClothingOuterApron
   entities:
   - uid: 9851
@@ -62915,69 +62859,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -36.49547,-36.772636
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 9893
-    components:
-    - type: Transform
-      parent: 2
-      pos: -40.49934,-36.642094
-  - uid: 9894
-    components:
-    - type: Transform
-      parent: 2
-      pos: -7.4850764,5.544639
-- proto: ClothingUniformColorRainbow
-  entities:
-  - uid: 9895
-    components:
-    - type: Transform
-      parent: 2
-      pos: -40.505074,-36.219357
-- proto: ClothingUniformJumpskirtDetective
-  entities:
-  - uid: 9896
-    components:
-    - type: Transform
-      parent: 2
-      pos: 13.6398945,-44.59481
-- proto: ClothingUniformJumpskirtJanimaid
-  entities:
-  - uid: 9897
-    components:
-    - type: Transform
-      parent: 2
-      pos: 8.506187,-6.4335732
-- proto: ClothingUniformJumpskirtJanimaidmini
-  entities:
-  - uid: 9898
-    components:
-    - type: Transform
-      parent: 2
-      pos: 8.493573,-6.4299474
-- proto: ClothingUniformJumpskirtOfLife
-  entities:
-  - uid: 9899
-    components:
-    - type: Transform
-      parent: 2
-      pos: 34.474197,-9.333076
-- proto: ClothingUniformJumpskirtPrisoner
-  entities:
-  - uid: 9715
-    components:
-    - type: Transform
-      parent: 9714
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 9716
-    components:
-    - type: Transform
-      parent: 9714
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingUniformJumpsuitClown
   entities:
   - uid: 9900
@@ -62992,7 +62873,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 29.548233,-0.078190595
-- proto: ClothingUniformJumpsuitDetective
+- proto: ClothingUniformJumpsuitMilitarySecurity
   entities:
   - uid: 9902
     components:
@@ -101311,16 +101192,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -59.5,53.5
-- proto: GlassBoxLaserFilled
-  entities:
-  - uid: 15321
-    components:
-    - type: Transform
-      parent: 2
-      pos: -4.5,-2.5
-    - type: AccessReader
-      accessListsOriginal:
-      - - Captain
 - proto: GlassBoxLawbringerFilled
   entities:
   - uid: 15322

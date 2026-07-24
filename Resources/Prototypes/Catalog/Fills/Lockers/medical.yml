@@ -144,8 +144,7 @@
       - id: ClothingOuterCoatParamedicWB
       - id: ClothingHeadHatParamedicsoft
       - id: ClothingOuterWinterPara
-      - id: ClothingUniformJumpsuitParamedic
-      - id: ClothingUniformJumpskirtParamedic
+      - id: ClothingUniformJumpsuitMilitaryMedicalDoctor #Lesotho
       - id: ClothingEyesHudMedical
       - id: ClothingHandsGlovesLatex
       - id: ClothingHeadsetMedical

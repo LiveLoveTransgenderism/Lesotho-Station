@@ -30,18 +30,6 @@
     belt: ClothingBeltJanitorFilled
     pocket1: KeyRingJanitor # Goobstation
 
-- type: startingGear
-  id: JanitorMaidGear
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtJanimaid
-    id: JanitorPDA
-    gloves: ClothingHandsGlovesJanitor
-    head: ClothingHeadHatCatEars
-    ears: ClothingHeadsetService
-    belt: ClothingBeltJanitorFilled
-    pocket1: KeyRingJanitor # Goobstation
-
-
 - type: chameleonOutfit
   id: JanitorChameleonOutfit
   job: Janitor

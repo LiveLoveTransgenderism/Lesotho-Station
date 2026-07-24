@@ -18946,13 +18946,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 47.5,12.5
-- proto: BedsheetRainbow
-  entities:
-  - uid: 1330
-    components:
-    - type: Transform
-      parent: 2
-      pos: 39.5,57.5
 - proto: BedsheetRD
   entities:
   - uid: 1331
@@ -65067,27 +65060,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -30.605223,25.633827
-- proto: ClothingNeckAromanticPin
-  entities:
-  - uid: 10137
-    components:
-    - type: Transform
-      parent: 2
-      pos: 29.412611,-17.30906
-- proto: ClothingNeckAsexualPin
-  entities:
-  - uid: 10138
-    components:
-    - type: Transform
-      parent: 2
-      pos: -0.7473192,-39.581512
-- proto: ClothingNeckBisexualPin
-  entities:
-  - uid: 10139
-    components:
-    - type: Transform
-      parent: 2
-      pos: -51.733475,-28.012512
 - proto: ClothingNeckBling
   entities:
   - uid: 10140
@@ -65121,27 +65093,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -9.457472,-8.396783
-- proto: ClothingNeckIntersexPin
-  entities:
-  - uid: 10145
-    components:
-    - type: Transform
-      parent: 2
-      pos: -28.35835,5.4578533
-- proto: ClothingNeckLesbianPin
-  entities:
-  - uid: 10146
-    components:
-    - type: Transform
-      parent: 2
-      pos: 16.717562,29.681984
-- proto: ClothingNeckLGBTPin
-  entities:
-  - uid: 10147
-    components:
-    - type: Transform
-      parent: 2
-      pos: 78.38637,7.410472
 - proto: ClothingNeckMantleHOS
   entities:
   - uid: 10149
@@ -65150,20 +65101,6 @@ entities:
       parent: 10148
     - type: Physics
       canCollide: False
-- proto: ClothingNeckNonBinaryPin
-  entities:
-  - uid: 10152
-    components:
-    - type: Transform
-      parent: 2
-      pos: -60.491737,42.509815
-- proto: ClothingNeckPansexualPin
-  entities:
-  - uid: 10153
-    components:
-    - type: Transform
-      parent: 2
-      pos: 24.309896,47.73986
 - proto: ClothingNeckScarfStripedGreen
   entities:
   - uid: 10154
@@ -65209,13 +65146,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 28.513184,-28.418102
-- proto: ClothingNeckTransPin
-  entities:
-  - uid: 10161
-    components:
-    - type: Transform
-      parent: 2
-      pos: -29.219229,-1.5939128
 - proto: ClothingOuterApronChef
   entities:
   - uid: 10162
@@ -65426,61 +65356,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -44.305817,50.410183
-- proto: ClothingUnderSocksBee
-  entities:
-  - uid: 10194
-    components:
-    - type: Transform
-      parent: 2
-      pos: -42.533257,-22.523739
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 10195
-    components:
-    - type: Transform
-      parent: 2
-      pos: -49.943916,-24.40092
-- proto: ClothingUniformColorRainbow
-  entities:
-  - uid: 10196
-    components:
-    - type: Transform
-      parent: 2
-      pos: -49.86655,-9.835638
-  - uid: 10197
-    components:
-    - type: Transform
-      parent: 2
-      pos: 40.711693,57.5467
-- proto: ClothingUniformJumpskirtDetectiveGrey
-  entities:
-  - uid: 10198
-    components:
-    - type: Transform
-      parent: 2
-      pos: 24.465298,46.585842
-- proto: ClothingUniformJumpskirtHoSParadeMale
-  entities:
-  - uid: 10150
-    components:
-    - type: Transform
-      parent: 10148
-    - type: Physics
-      canCollide: False
-- proto: ClothingUniformJumpskirtJanimaid
-  entities:
-  - uid: 10199
-    components:
-    - type: Transform
-      parent: 2
-      pos: 17.48354,-31.477547
-- proto: ClothingUniformJumpskirtPerformer
-  entities:
-  - uid: 10200
-    components:
-    - type: Transform
-      parent: 2
-      pos: -17.736828,-19.660236
 - proto: ClothingUniformJumpsuitAncient
   entities:
   - uid: 10201
@@ -65495,14 +65370,14 @@ entities:
     - type: Transform
       parent: 2
       pos: -22.435818,-49.512173
-- proto: ClothingUniformJumpsuitDetectiveGrey
+- proto: ClothingUniformJumpsuitMilitarySecurity
   entities:
   - uid: 10203
     components:
     - type: Transform
       parent: 2
       pos: 24.215298,46.821953
-- proto: ClothingUniformJumpsuitHoSParadeMale
+- proto: ClothingUniformJumpsuitMilitarySecurityHOS
   entities:
   - uid: 10151
     components:
@@ -65524,13 +65399,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -14.379087,-29.473778
-- proto: ClothingUniformJumpsuitSecBlue
-  entities:
-  - uid: 10206
-    components:
-    - type: Transform
-      parent: 2
-      pos: 28.590425,-28.406395
 - proto: CombatKnife
   entities:
   - uid: 10207
@@ -76042,13 +75910,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 59.572353,0.7444
-- proto: DrinkMugRainbow
-  entities:
-  - uid: 11950
-    components:
-    - type: Transform
-      parent: 2
-      pos: -49.2279,-26.573906
 - proto: DrinkMugRed
   entities:
   - uid: 11951
@@ -117964,7 +117825,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 51.5,-11.5
-- proto: LockerCaptainFilled
+- proto: LockerCaptainFilledNoLaser
   entities:
   - uid: 18247
     components:

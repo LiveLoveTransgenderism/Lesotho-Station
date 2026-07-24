@@ -41,14 +41,12 @@
 - type: vendingMachineInventory
   id: MiningDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitSalvageSpecialist: 3
-    ClothingUniformJumpsuitShaftMiner: 3
+    ClothingUniformJumpsuitMilitarySalvageSpecialist: 3 #Lesotho
     ClothingShoesBootsSalvage: 3
     ClothingHandsGlovesColorBlack: 3
     ClothingBackpackSalvage: 2
     ClothingBackpackSatchelSalvage: 2
     ClothingBackpackDuffelSalvage: 2
-    ClothingBackpackMessengerSalvage: 2
     ClothingHeadsetMining: 4
     ClothingOuterWinterMiner: 2
   emaggedInventory:
